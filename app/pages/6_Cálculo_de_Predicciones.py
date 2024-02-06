@@ -5,13 +5,13 @@ import pickle
 
 st.set_page_config(layout="wide")
 
-logo_url = './imagenes/logo.png'
+logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Cálculo de Predicciones')
 
 # Cargamos nuestro dataset
-data = pd.read_csv('../datasets/JSTdatasetR6.csv', sep=';', na_values='', decimal=',')
+data = pd.read_csv('datasets/JSTdatasetR6.csv', sep=';', na_values='', decimal=',')
 
 # Creamos los filtros para interactividad y contenedores de widgets
 if 'filtro_year' not in st.session_state:
@@ -100,7 +100,7 @@ def calcular_atributos():
     st.session_state.expand1=False
     st.session_state.expand2=True
     vacio1.empty()
-    data_aux = pd.read_csv('../datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
+    data_aux = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
     data_aux = data_aux[(data_aux['iso']==st.session_state.iso1) & (data_aux['year']==int(st.session_state.year2))]
     if len(data_aux) > 0:
         st.session_state.iso=data_aux['iso'].iloc[0]
@@ -128,15 +128,15 @@ def calcular_prediccion():
     st.session_state.expand3=True
     
     vacio1.empty()
-    data_aux = pd.read_csv('../datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
+    data_aux = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
     data_aux = data_aux[(data_aux['iso']==st.session_state.iso1) & (data_aux['year']==int(st.session_state.year2))]
 
     # Atributos finales
-    with open('../preprocesadores/atributos_discriminativos_deleted.pkl', 'rb') as f:
+    with open('preprocesadores/atributos_discriminativos_deleted.pkl', 'rb') as f:
         atributos_discriminativos_deleted = pickle.load(f)
 
     # Estandarizador
-    with open('../preprocesadores/estandarizador.pkl', 'rb') as f:
+    with open('preprocesadores/estandarizador.pkl', 'rb') as f:
         estandarizador = pickle.load(f)
     
     X = data_aux.iloc[:, :11].to_numpy(na_value=np.nan)
@@ -148,7 +148,7 @@ def calcular_prediccion():
     y = data_aux['crisisJST'].to_numpy()
     
     # Mejor modelo final
-    with open('../modelos_entrenados/mejor_modelo_entrenado.pkl', 'rb') as f:
+    with open('modelos_entrenados/mejor_modelo_entrenado.pkl', 'rb') as f:
         mejor_modelo_entrenado = pickle.load(f)
     resultado = int(mejor_modelo_entrenado["logisticregression"].predict(X_std)[0])    
     probabilidad = np.max(mejor_modelo_entrenado["logisticregression"].predict_proba(X_std))
