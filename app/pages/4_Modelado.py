@@ -6,7 +6,7 @@ import pickle
 
 st.set_page_config(layout="wide")
 
-logo_url = './imagenes/logo.png'
+logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Modelado')
@@ -47,7 +47,7 @@ Como ocurría durante la realización del particionado externo (Hold-out), duran
 Por este motivo se ha creado una función customizada para la creación de las distintas particiones, de manera que se asegure por un lado la coherencia temporal (no existencia de fuga de datos), y por otro la existencia de instancias de ambas clases, imitando para ello el comportamiento de “TimeSeriesSplit. Para ello se calcula un reparto equitativo de muestras minoritarias y se van creando las particiones de manera secuencial. A continuación se puede observar gráficamente un ejemplo para la creación de cinco folds:''')
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('./imagenes/folds.png')
+        st.image('app/imagenes/folds.png')
 
 with tab3:
     st.markdown('''## **:orange[Técnicas de Balanceo de Datos]**
@@ -72,13 +72,13 @@ El funcionamiento se puede ver de manera gráfica en la siguiente imagen:''')
     with st.container():
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            st.image('./imagenes/smote.png')
+            st.image('app/imagenes/smote.png')
     
         with col2:
-            st.image('./imagenes/oversampling.png')
+            st.image('app/imagenes/oversampling.png')
     
         with col3:
-            st.image('./imagenes/undersampling.png')
+            st.image('app/imagenes/undersampling.png')
     
         with col4:
             st.write("")
@@ -92,7 +92,7 @@ Para asegurar que se mantiene el buscado reparto equitativo de muestras en las p
 
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('./imagenes/pipeline.png')
+        st.image('app/imagenes/pipeline.png')
 
 
 with tab5:
@@ -108,7 +108,7 @@ En este caso consideraremos que ambas situaciones (falso positivo y falso negati
 
     col1, col2, col3, col4 = st.columns(4)
     with col2:
-        st.image('./graficas/ROC_curve.png')
+        st.image('app/graficas/ROC_curve.png')
     with col3:
-        st.image('./graficas/PR_curve.png')
+        st.image('app/graficas/PR_curve.png')
 
