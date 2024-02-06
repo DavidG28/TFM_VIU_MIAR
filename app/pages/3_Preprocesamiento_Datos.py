@@ -238,7 +238,7 @@ with tab4:
     with st.container():
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.write('**:orange[Eliminación de Instancias con valores ausentes:]**')
+            st.write('**:orange[Eliminación de instancias con valores ausentes:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_deleted.shape[1])
             st.image('app/graficas/disc_deleted.png')
             st.write(atributos_discriminativos_deleted)
@@ -260,7 +260,7 @@ with tab4:
     with st.container():
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.write('**:orange[Eliminación de Instancias con valores ausentes:]**')
+            st.write('**:orange[Eliminación de instancias con valores ausentes:]**')
             st.image('app/graficas/corr_deleted.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col2:
