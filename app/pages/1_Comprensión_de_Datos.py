@@ -4,7 +4,7 @@ import numpy as np
 
 st.set_page_config(layout="wide")
 
-logo_url = './imagenes/logo.png'
+logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Comprensión de Datos')
@@ -80,7 +80,7 @@ with tab2:
     st.write('## **:orange[Características Raw Dataset:]**')
     
     # Cargamos nuestro dataset
-    data = pd.read_csv('../datasets/JSTdatasetR6.csv', sep=';', na_values='', decimal=',')
+    data = pd.read_csv('datasets/JSTdatasetR6.csv', sep=';', na_values='', decimal=',')
     
     # Creamos los filtros para interactividad
     countries = list(data['country'].drop_duplicates())
@@ -121,11 +121,11 @@ with tab2:
     st.dataframe(porcentaje, use_container_width=True, height=140)
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_bruto_ausentes_atributo.png')
+        st.image('app/graficas/comprension_bruto_ausentes_atributo.png')
     st.write('&emsp;Valores Ausentes por Año:')
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_bruto_ausentes_anio.png')
+        st.image('app/graficas/comprension_bruto_ausentes_anio.png')
 
 with tab3:
     st.write('## **:orange[Dataset Final:]**')
@@ -191,7 +191,7 @@ with tab4:
     st.write('## **:orange[Métricas:]**')
 
         # Cargamos nuestro dataset final
-    data_final = pd.read_csv('../datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
+    data_final = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
     
     st.write('#### **:orange[Resultado Final:]**')
     st.dataframe(data_final, height=180, use_container_width=True)
@@ -201,7 +201,7 @@ with tab4:
     st.write('&emsp;Balance de Clases:&emsp;', 'No Crisis: ', round(data_final[data_final['crisisJST'] == 0].shape[0] / data_final.shape[0] * 100, 2), '%&emsp;Pre-Crisis: ', round(data_final[data_final['crisisJST'] == 1].shape[0] / data_final.shape[0] * 100, 2), '%', unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_final_instancias_clase.png')
+        st.image('app/graficas/comprension_final_instancias_clase.png')
     
     num_ausentes = data_final.isnull().sum()
     porcentaje = round(num_ausentes / data_final.shape[0] * 100, 2)
@@ -213,15 +213,15 @@ with tab4:
     st.dataframe(porcentaje, use_container_width=True, height=140)
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_final_porcentaje_ausentes_atributo.png')
+        st.image('app/graficas/comprension_final_porcentaje_ausentes_atributo.png')
     st.write('&emsp;Valores Ausentes por Año:')
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_final_ausentes_anio.png')
+        st.image('app/graficas/comprension_final_ausentes_anio.png')
     st.write('&emsp;Valores Ausentes por País:')
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_final_ausentes_pais.png')
+        st.image('app/graficas/comprension_final_ausentes_pais.png')
 
 with tab5:
     st.write('## **:orange[Análisis Exploratorio:]**')
@@ -229,45 +229,45 @@ with tab5:
     st.markdown('''Por lo general los rangos de los atributos para los distintos países son bastante parecidos. Destacar el cierto sesgo que introduce la variación del PIB de Japón al inicio de la serie temporal, lo que coincide con el lanzamiento en 1945 por parte de Estados Unidos de las bombas atómicas de Hiroshima y Nagasaki, lo que explica dicha variación abrupta dadas las consecuencias económicas.''')
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_0.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_4.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_8.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_0.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_4.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_8.png')
     with col2:
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_1.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_5.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_9.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_1.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_5.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_9.png')
     with col3:
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_2.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_6.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_10.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_2.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_6.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_10.png')
     with col4:
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_3.png')
-        st.image('../app/graficas/comprension_final_valores_atributos_pais_7.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_3.png')
+        st.image('app/graficas/comprension_final_valores_atributos_pais_7.png')
 
     st.write('#### **:orange[Distribución de valores de atributos por clase:]**')
     st.markdown('''+ Se observa que no existe una clara distinción en lo que a distribución de valores de los distintos atributos según la clase se refiere, a excepción de 'tloans_pib_dif_abs2' y 'tdbtserv_pib_dif_abs2' de manera muy débil y principalmente de 'global_loan2' y 'global_drate'.
 + Incluso si nos limitamos a revisar el comportamiento de los atributos para las muestras asociadas a la clase 'pre-crisis' y su desviación típica, se observa que las variaciones en el rango histórico y geográfico han sido pequeñas. Ésto indicaría en parte que en el ámbito bajo estudio los indicadores de posible crisis serán bastante estables y concentrados.''')
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_0.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_4.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_8.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_0.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_4.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_8.png')
     with col2:
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_1.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_5.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_9.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_1.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_5.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_9.png')
     with col3:
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_2.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_6.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_10.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_2.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_6.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_10.png')
     with col4:
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_3.png')
-        st.image('../app/graficas/comprension_final_distribucion_atributos_clase_7.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_3.png')
+        st.image('app/graficas/comprension_final_distribucion_atributos_clase_7.png')
 
     st.write('#### **:orange[Relaciones bivariable con clase:]**')
     st.markdown('''Usando dos variables, se empiezan a observar ciertas diferenciaciones según la clase como podría ser el caso de la combinación ('pdebt_pib_dif_abs2', 'tdbtserv_pib_dif_abs2'), donde las muestras asociadas a 'pre-crisis' paracen más concentradas en una determinada zona del espacio, aunque siguen con poca diferenciación con respecto a las muestras de 'no crisis' ''')
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('../app/graficas/comprension_final_pairplot.png')
+        st.image('app/graficas/comprension_final_pairplot.png')
 
     st.markdown('''El análisis de datos se complementará posteriormente durante la etapa de preprocesamiento de datos y más en concreto en la fase de selección de atributos, en la cual se procederá a analizar qué atributos son discriminativos con respecto a la clase, se presentarán sus diagramas de caja-bigotes y se calculará el grado de correlación entre ellos para decidir qué atributos se usan finalmente durante la fase de entrenamiento de modelos.''')
