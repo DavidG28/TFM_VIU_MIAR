@@ -14,7 +14,7 @@ with tab1:
     st.write('## **:orange[Raw Dataset:]**')
     
     # Cargamos nuestro dataset
-    data = pd.read_csv('../datasets/JSTdatasetR6.csv', sep=';', na_values='', decimal=',')
+    data = pd.read_csv('datasets/JSTdatasetR6.csv', sep=';', na_values='', decimal=',')
     
     # Creamos los filtros para interactividad
     countries = list(data['country'].drop_duplicates())
@@ -112,7 +112,7 @@ A partir de los datos anteriores se procede a la elaboración de los siguientes 
         st.markdown('Aumentos en los tipos de interés podrían indicar restricciones de acceso a la financiación privada, lo que podría ser indicativo de problemas de salud financiera.')
     
     # Cargamos nuestro dataset final
-    data_final = pd.read_csv('../datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
+    data_final = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
     
     st.write('#### **:orange[Resultado Final:]**')
     st.dataframe(data_final, height=180, use_container_width=True)
