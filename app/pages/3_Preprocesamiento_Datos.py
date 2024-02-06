@@ -210,10 +210,15 @@ Los motivos principales de este comportamiento negativo serían dos:
 * Sin embargo el punto más grave de proceder con la realización de una eliminación de outliers sería el siguiente: como sabemos uno de los posibles indicadores predictivos de una posible situación futura de crisis financiera es un escenario de hiper-inflación. Este escenario se traduciría en un valor atípico del indicador macroeconómico del Índice de Precios al Consumo. Si como parte de nuestro proceso de procesamiento de los datos eliminamos estos valores atípicos, estaríamos evitando que el modelo predictivo pudiera detectar este tipo de patrones para la predicción de las futuras crisis financieras. Ésto mismos podría ocurrir con el resto de atributos empleados.''')
 
 with tab4:
-    st.markdown('''## **:orange[Selección de Atributos]**
-De cara a poder realizar una comparativa posterior en base a las métricas de los distintos algoritmos, se han planteado tres estrategias de selección de atributos sobre cada uno de los datasets anteriores:''')
+    st.write('## **:orange[Selección de Atributos]**')
 
     st.write('#### **Atributos Discriminativos:**')
+    st.markdown('''El siguiente proceso a realizar se centra en eliminar aquellos atributos que no sean discriminativos con respecto de la clase. Para ello se han seguido los siguientes pasos:
+
++ Para cada atributo se realiza un estudio para determinar si sigue o no una distribución normal mediante la prueba de Kolmogorov-Smirnov, usando para ello la utilidad "scipy.stats.kstest".
++ En caso de no seguir una distribución normal, se realiza una comparativa de las medianas de los atributos para las muestras asociadas a cada clase, para ello se usará la utilidad “scipy.stats.mannwhitneyu” (prueba U de Mann-Whitney).
++En caso de seguir una distribución normal, se realiza una comparativa de las medias de los atributos para las muestras asociadas a cada clase, para ello se usará la utilidad “scipy.stats.ttest_ind” (prueba T de Student).''')
+
     with open('preprocesadores/nuevos_atributos.pkl', 'rb') as f:
         nuevos_atributos = pickle.load(f)
 
