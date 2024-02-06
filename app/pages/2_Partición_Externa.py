@@ -16,7 +16,7 @@ Dado que estamos ante un problema de series temporales, se requiere mantener la 
 * Para cumplir lo anterior se particionará el dataset a partir de un año concreto manteniendo los valores más cercanos a una distribución de porcentajes igual al 80% para datos de entrenamiento y 20% para datos de prueba.''')
 
 # Cargamos nuestro dataset
-data = pd.read_csv('../datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
+data = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
 
 st.write(' Se tendrá que tener en cuenta que las instancias para cada año no son iguales en el dataset final para mantener un porcentaje 80%-20% adecuado:')
 
