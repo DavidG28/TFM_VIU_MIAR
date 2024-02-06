@@ -217,7 +217,7 @@ with tab4:
 
 + Para cada atributo se realiza un estudio para determinar si sigue o no una distribución normal mediante la prueba de Kolmogorov-Smirnov, usando para ello la utilidad "scipy.stats.kstest".
 + En caso de no seguir una distribución normal, se realiza una comparativa de las medianas de los atributos para las muestras asociadas a cada clase, para ello se usará la utilidad “scipy.stats.mannwhitneyu” (prueba U de Mann-Whitney).
-+En caso de seguir una distribución normal, se realiza una comparativa de las medias de los atributos para las muestras asociadas a cada clase, para ello se usará la utilidad “scipy.stats.ttest_ind” (prueba T de Student).''')
++ En caso de seguir una distribución normal, se realiza una comparativa de las medias de los atributos para las muestras asociadas a cada clase, para ello se usará la utilidad “scipy.stats.ttest_ind” (prueba T de Student).''')
 
     with open('preprocesadores/nuevos_atributos.pkl', 'rb') as f:
         nuevos_atributos = pickle.load(f)
