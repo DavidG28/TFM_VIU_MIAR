@@ -12,7 +12,7 @@ from scipy import stats
 
 st.set_page_config(layout="wide")
 
-logo_url = './imagenes/logo.png'
+logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Workflow Preprocesamiento de Datos')
