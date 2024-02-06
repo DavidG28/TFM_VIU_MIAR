@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import streamlit as st
 import pickle
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
@@ -12,7 +11,7 @@ from scipy import stats
 
 st.set_page_config(layout="wide")
 
-logo_url = 'app/imagenes/logo.png'
+logo_url = './imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Workflow Preprocesamiento de Datos')
@@ -20,10 +19,10 @@ st.title('Workflow Preprocesamiento de Datos')
 tab1, tab2, tab3, tab4 = st.tabs(['Estandarización', 'Imputación de Valores Ausentes', 'Eliminación de Outliers', 'Selección de Atributos'])
 
 # Cargamos nuestro dataset de entrenamiento
-data_train = pd.read_csv('particiones/train.csv', sep=';', na_values='', decimal=',')
+data_train = pd.read_csv('../particiones/train.csv', sep=';', na_values='', decimal=',')
 
 # Cargamos nuestro dataset de test
-data_test = pd.read_csv('particiones/test.csv', sep=';', na_values='', decimal=',')
+data_test = pd.read_csv('../particiones/test.csv', sep=';', na_values='', decimal=',')
 
 def separa_X_y(data):
     X = data.iloc[:, :11].to_numpy(na_value=np.nan)
@@ -215,7 +214,7 @@ with tab4:
 De cara a poder realizar una comparativa posterior en base a las métricas de los distintos algoritmos, se han planteado tres estrategias de selección de atributos sobre cada uno de los datasets anteriores:''')
 
     st.write('#### **Atributos Discriminativos:**')
-    with open('preprocesadores/nuevos_atributos.pkl', 'rb') as f:
+    with open('../preprocesadores/nuevos_atributos.pkl', 'rb') as f:
         nuevos_atributos = pickle.load(f)
 
     X_train_std_disc_deleted, X_test_std_disc_deleted, atributos_discriminativos_deleted = evalua_atributos_discriminativos(X_train_std_deleted, y_train_deleted, X_test_std_deleted, nuevos_atributos)
