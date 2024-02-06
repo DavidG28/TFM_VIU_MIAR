@@ -6,7 +6,7 @@ import pickle
 
 st.set_page_config(layout="wide")
 
-logo_url = './imagenes/logo.png'
+logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Resultados')
@@ -29,7 +29,7 @@ Centrándonos en las estrategias de imputación de valores ausentes, los modelos
 
 Las métricas obtenidas en cada caso han sido:''')
     
-    with open('../modelos_entrenados/tabla_mejores_modelos.pkl', 'rb') as f:
+    with open('modelos_entrenados/tabla_mejores_modelos.pkl', 'rb') as f:
         tabla_mejores_modelos = pickle.load(f)
 
     st.dataframe(tabla_mejores_modelos)
@@ -43,11 +43,11 @@ Para cada uno de los mejores modelos, las matrices de confusión obtenidas han s
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image('./graficas/delete_LOGR_OVER.png')
+        st.image('app/graficas/delete_LOGR_OVER.png')
     with col2:
-        st.image('./graficas/media_MLP_OVER.png')
+        st.image('app/graficas/media_MLP_OVER.png')
     with col3:
-        st.image('./graficas/knn_SVM_BAL.png')
+        st.image('app/graficas/knn_SVM_BAL.png')
 
     st.markdown('''En ellas se puede ver claramente el trade-off entre fiabilidad a la hora de no pasar por alto ningún posible indicador de posible crisis futura (verdadero positivo en este caso), frente al nivel de falsos positivos generados.
 
@@ -61,7 +61,7 @@ Si nos centramos en dicho modelo, podemos revisar en qué muestras se han produc
 
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image('./graficas/errores_prediccion.png')
+        st.image('app/graficas/errores_prediccion.png')
     
     st.markdown('''Como se puede observar muchos errores se localizan en el año 2020, año de la pandemia de COVID-19 y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable, dado que sabemos que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, con lo que la predicción del modelo podría considerarse correcta.''')
 
