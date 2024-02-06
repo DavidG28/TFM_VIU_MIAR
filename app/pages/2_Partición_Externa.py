@@ -4,7 +4,7 @@ import numpy as np
 
 st.set_page_config(layout="wide")
 
-logo_url = './imagenes/logo.png'
+logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Partición de Datos Externa (Hold-Out)')
