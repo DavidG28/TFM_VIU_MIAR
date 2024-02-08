@@ -200,6 +200,7 @@ De cara a poder realizar una comparativa posterior en base a las métricas de lo
 
 with tab3:
     st.markdown('''## **:orange[Eliminación de Outliers]**
+<div style="text-align: justify;">
     
 Aunque por lo general como parte del proceso de procesamiento de los datos siempre se suele aplicar una etapa de eliminación de valores atípicos o outliers, en el presente caso se ha optado por no aplicarla dado que podría ser contraproducente y provocar pérdidas de información o patrones valiosos en lugar de las mejoras esperadas.
 
@@ -207,17 +208,19 @@ Los motivos principales de este comportamiento negativo serían dos:
 
 * Por un lado hay que tener en cuenta que se está trabajando con datos correspondientes a distintos países y por tanto los rangos asociados a los datos macroeconómicos (a pesar de haber usado parámetros estandarizadores), podrían ser diferentes sin que eso supusiera la existencia de outliers. En este caso al menos deberíamos buscar valores atípicos limitando los datos a los correspondientes a cada país en lugar de hacer una búsqueda sobre el conjunto completo de datos disponibles.
 
-* Sin embargo el punto más grave de proceder con la realización de una eliminación de outliers sería el siguiente: como sabemos uno de los posibles indicadores predictivos de una posible situación futura de crisis financiera es un escenario de hiper-inflación. Este escenario se traduciría en un valor atípico del indicador macroeconómico del Índice de Precios al Consumo. Si como parte de nuestro proceso de procesamiento de los datos eliminamos estos valores atípicos, estaríamos evitando que el modelo predictivo pudiera detectar este tipo de patrones para la predicción de las futuras crisis financieras. Ésto mismos podría ocurrir con el resto de atributos empleados.''')
+* Sin embargo el punto más grave de proceder con la realización de una eliminación de outliers sería el siguiente: como sabemos uno de los posibles indicadores predictivos de una posible situación futura de crisis financiera es un escenario de hiper-inflación. Este escenario se traduciría en un valor atípico del indicador macroeconómico del Índice de Precios al Consumo. Si como parte de nuestro proceso de procesamiento de los datos eliminamos estos valores atípicos, estaríamos evitando que el modelo predictivo pudiera detectar este tipo de patrones para la predicción de las futuras crisis financieras. Ésto mismos podría ocurrir con el resto de atributos empleados.</div>''', unsafe_allow_html=True)
 
 with tab4:
     st.write('## **:orange[Selección de Atributos]**')
 
     st.write('#### **Atributos Discriminativos:**')
-    st.markdown('''El siguiente proceso a realizar se centra en eliminar aquellos atributos que no sean discriminativos con respecto de la clase. Para ello se han seguido los siguientes pasos:
+    st.markdown('''<div style="text-align: justify;">
+    
+El siguiente proceso a realizar se centra en eliminar aquellos atributos que no sean discriminativos con respecto de la clase. Para ello se han seguido los siguientes pasos:
 
 + Para cada atributo se realiza un estudio para determinar si sigue o no una distribución normal mediante la prueba de Kolmogorov-Smirnov.
 + En caso de no seguir una distribución normal, se realiza una comparativa de las medianas de los atributos para las muestras asociadas a cada clase (prueba U de Mann-Whitney).
-+ En caso de seguir una distribución normal, se realiza una comparativa de las medias de los atributos para las muestras asociadas a cada clase (prueba T de Student).''')
++ En caso de seguir una distribución normal, se realiza una comparativa de las medias de los atributos para las muestras asociadas a cada clase (prueba T de Student).</div>''', unsafe_allow_html=True)
 
     with open('preprocesadores/nuevos_atributos.pkl', 'rb') as f:
         nuevos_atributos = pickle.load(f)
