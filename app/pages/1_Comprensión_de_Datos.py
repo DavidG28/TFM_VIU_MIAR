@@ -230,7 +230,7 @@ with tab5:
     st.write('#### **:orange[Distribución de valores de atributos por país:]**')
     st.markdown('''<div style="text-align: justify;">
     
-    Por lo general los rangos de los atributos para los distintos países son bastante parecidos. Destacar el cierto sesgo que introduce la variación del PIB de Japón al inicio de la serie temporal, lo que coincide con el lanzamiento en 1945 por parte de Estados Unidos de las bombas atómicas de Hiroshima y Nagasaki, lo que explica dicha variación abrupta dadas las consecuencias económicas.</div>''', unsafe_allow_html=True)
+Por lo general los rangos de los atributos para los distintos países son bastante parecidos. Destacar el cierto sesgo que introduce la variación del PIB de Japón al inicio de la serie temporal, lo que coincide con el lanzamiento en 1945 por parte de Estados Unidos de las bombas atómicas de Hiroshima y Nagasaki, lo que explica dicha variación abrupta dadas las consecuencias económicas.</div>''', unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.image('app/graficas/comprension_final_valores_atributos_pais_0.png')
@@ -274,11 +274,11 @@ with tab5:
     st.write('#### **:orange[Relaciones bivariable con clase:]**')
     st.markdown('''<div style="text-align: justify;">
     
-    Usando dos variables, se empiezan a observar ciertas diferenciaciones según la clase como podría ser el caso de la combinación ('pdebt_pib_dif_abs2', 'tdbtserv_pib_dif_abs2'), donde las muestras asociadas a 'pre-crisis' paracen más concentradas en una determinada zona del espacio, aunque siguen con poca diferenciación con respecto a las muestras de 'no crisis':</div>''', unsafe_allow_html=True)
+Usando dos variables, se empiezan a observar ciertas diferenciaciones según la clase como podría ser el caso de la combinación ('pdebt_pib_dif_abs2', 'tdbtserv_pib_dif_abs2'), donde las muestras asociadas a 'pre-crisis' paracen más concentradas en una determinada zona del espacio, aunque siguen con poca diferenciación con respecto a las muestras de 'no crisis':</div>''', unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col2:
         st.image('app/graficas/comprension_final_pairplot.png')
 
     st.markdown('''<div style="text-align: justify;">
     
-    El análisis de datos se complementará posteriormente durante la etapa de preprocesamiento de datos y más en concreto en la fase de selección de atributos, en la cual se procederá a analizar qué atributos son discriminativos con respecto a la clase, se presentarán sus diagramas de caja-bigotes y se calculará el grado de correlación entre ellos para decidir qué atributos se usan finalmente durante la fase de entrenamiento de modelos.</div>''', unsafe_allow_html=True)
+El análisis de datos se complementará posteriormente durante la etapa de preprocesamiento de datos y más en concreto en la fase de selección de atributos, en la cual se procederá a analizar qué atributos son discriminativos con respecto a la clase, se presentarán sus diagramas de caja-bigotes y se calculará el grado de correlación entre ellos para decidir qué atributos se usan finalmente durante la fase de entrenamiento de modelos.</div>''', unsafe_allow_html=True)
