@@ -150,7 +150,9 @@ with tab3:
     
     st.markdown('''#### **:orange[Creación de nuevos atributos:]**
     
-<div style="text-align: justify;">A partir de los datos anteriores se procede a la elaboración de los siguientes nuevos atributos que serán los finalmente usados como base para el proceso de entrenamiento. Se usarán indicadores relativos calculados a partir de los datos macroeconómicos, ya que por lo general ofrecen mayor información que los valores absolutos en sí.
+<div style="text-align: justify;">
+
+A partir de los datos anteriores se procede a la elaboración de los siguientes nuevos atributos que serán los finalmente usados como base para el proceso de entrenamiento. Se usarán indicadores relativos calculados a partir de los datos macroeconómicos, ya que por lo general ofrecen mayor información que los valores absolutos en sí.
     
 A modo de ejemplo: el precio de la vivienda a lo largo del tiempo ha ido creciendo, pero ¿podríamos decir de forma categórica si el precio actual es alto o no sin tomar ningún otro indicador como referencia? En principio sería complicado, pero si por ejemplo calculamos un crecimiento interanual de dicho precio en un 100%, sí podríamos indicar que se ha producido un acusado aumento de los precios.</div>''', unsafe_allow_html=True)
     
@@ -226,7 +228,9 @@ with tab4:
 with tab5:
     st.write('## **:orange[Análisis Exploratorio:]**')
     st.write('#### **:orange[Distribución de valores de atributos por país:]**')
-    st.markdown('''<div style="text-align: justify;">Por lo general los rangos de los atributos para los distintos países son bastante parecidos. Destacar el cierto sesgo que introduce la variación del PIB de Japón al inicio de la serie temporal, lo que coincide con el lanzamiento en 1945 por parte de Estados Unidos de las bombas atómicas de Hiroshima y Nagasaki, lo que explica dicha variación abrupta dadas las consecuencias económicas.</div></br>''', unsafe_allow_html=True)
+    st.markdown('''<div style="text-align: justify;">
+    
+    Por lo general los rangos de los atributos para los distintos países son bastante parecidos. Destacar el cierto sesgo que introduce la variación del PIB de Japón al inicio de la serie temporal, lo que coincide con el lanzamiento en 1945 por parte de Estados Unidos de las bombas atómicas de Hiroshima y Nagasaki, lo que explica dicha variación abrupta dadas las consecuencias económicas.</div>''', unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.image('app/graficas/comprension_final_valores_atributos_pais_0.png')
@@ -249,7 +253,7 @@ with tab5:
     
 + Se observa que no existe una clara distinción en lo que a distribución de valores de los distintos atributos según la clase se refiere, a excepción de 'tloans_pib_dif_abs2' y 'tdbtserv_pib_dif_abs2' de manera muy débil y principalmente de 'global_loan2' y 'global_drate'.
     
-+ Incluso si nos limitamos a revisar el comportamiento de los atributos para las muestras asociadas a la clase 'pre-crisis' y su desviación típica, se observa que las variaciones en el rango histórico y geográfico han sido pequeñas. Ésto indicaría en parte que en el ámbito bajo estudio los indicadores de posible crisis serán bastante estables y concentrados.</div></br>''', unsafe_allow_html=True)
++ Incluso si nos limitamos a revisar el comportamiento de los atributos para las muestras asociadas a la clase 'pre-crisis' y su desviación típica, se observa que las variaciones en el rango histórico y geográfico han sido pequeñas. Ésto indicaría en parte que en el ámbito bajo estudio los indicadores de posible crisis serán bastante estables y concentrados.</div>''', unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.image('app/graficas/comprension_final_distribucion_atributos_clase_0.png')
@@ -268,9 +272,13 @@ with tab5:
         st.image('app/graficas/comprension_final_distribucion_atributos_clase_7.png')
 
     st.write('#### **:orange[Relaciones bivariable con clase:]**')
-    st.markdown('''<div style="text-align: justify;">Usando dos variables, se empiezan a observar ciertas diferenciaciones según la clase como podría ser el caso de la combinación ('pdebt_pib_dif_abs2', 'tdbtserv_pib_dif_abs2'), donde las muestras asociadas a 'pre-crisis' paracen más concentradas en una determinada zona del espacio, aunque siguen con poca diferenciación con respecto a las muestras de 'no crisis':</div></br>''', unsafe_allow_html=True)
+    st.markdown('''<div style="text-align: justify;">
+    
+    Usando dos variables, se empiezan a observar ciertas diferenciaciones según la clase como podría ser el caso de la combinación ('pdebt_pib_dif_abs2', 'tdbtserv_pib_dif_abs2'), donde las muestras asociadas a 'pre-crisis' paracen más concentradas en una determinada zona del espacio, aunque siguen con poca diferenciación con respecto a las muestras de 'no crisis':</div>''', unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col2:
         st.image('app/graficas/comprension_final_pairplot.png')
 
-    st.markdown('''<div style="text-align: justify;">El análisis de datos se complementará posteriormente durante la etapa de preprocesamiento de datos y más en concreto en la fase de selección de atributos, en la cual se procederá a analizar qué atributos son discriminativos con respecto a la clase, se presentarán sus diagramas de caja-bigotes y se calculará el grado de correlación entre ellos para decidir qué atributos se usan finalmente durante la fase de entrenamiento de modelos.</div>''', unsafe_allow_html=True)
+    st.markdown('''<div style="text-align: justify;">
+    
+    El análisis de datos se complementará posteriormente durante la etapa de preprocesamiento de datos y más en concreto en la fase de selección de atributos, en la cual se procederá a analizar qué atributos son discriminativos con respecto a la clase, se presentarán sus diagramas de caja-bigotes y se calculará el grado de correlación entre ellos para decidir qué atributos se usan finalmente durante la fase de entrenamiento de modelos.</div>''', unsafe_allow_html=True)
