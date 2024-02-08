@@ -8,12 +8,14 @@ logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Partición de Datos Externa (Hold-Out)')
-st.markdown('''Se va a comenzar realizando la partición de datos externa para separar el conjunto de datos total en los subconjuntos de entrenamiento (train), y prueba (test).
+st.markdown('''<div style="text-align: justify;">
+
+Se va a comenzar realizando la partición de datos externa para separar el conjunto de datos total en los subconjuntos de entrenamiento (train), y prueba (test).
 Dado que estamos ante un problema de series temporales, se requiere mantener la coherencia temporal por lo que:
 
 * No se aplicará shuffle a los datos.
 * En este caso asegurar que datos de entrenamiento no se localizan entre los datos de test, no sólo se limita a las instancias individuales en sí, sino que dado que nuestro objetivo será predecir si en un cierto año y para un determinado país se está ante una posible situación de pre-crisis, también tenemos que asegurar que no existe información relativa a años posteriores en nuestro conjunto de test ni para el país bajo estudio en concreto ni tampoco para otros paises (*Hellwig, K.P. (2021). Predicting Fiscal Crises: A Machine Learning Approach*).
-* Para cumplir lo anterior se particionará el dataset a partir de un año concreto manteniendo los valores más cercanos a una distribución de porcentajes igual al 80% para datos de entrenamiento y 20% para datos de prueba.''')
+* Para cumplir lo anterior se particionará el dataset a partir de un año concreto manteniendo los valores más cercanos a una distribución de porcentajes igual al 80% para datos de entrenamiento y 20% para datos de prueba.</div>''', unsafe_allow_html=True)
 
 # Cargamos nuestro dataset
 data = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
