@@ -169,7 +169,9 @@ El primer paso del preprocesamiento consiste en la estandarización de los datos
 with tab2:    
     st.markdown('## **:orange[Tratamiento de Valores Ausentes]**')
     st.markdown('''#### **Eliminación de Atributos por Missing Value Ratio**
-Dentro de este punto y dado que para muchos atributos el ratio de valores ausentes es elevado, se ha procedido a un primer paso de eliminación de características que superen un Missing Value Ratio del 30%:''')
+<div style="text-align: justify;">
+
+Dentro de este punto y dado que para muchos atributos el ratio de valores ausentes es elevado, se ha procedido a un primer paso de eliminación de características que superen un Missing Value Ratio del 30%:</div>''', unsafe_allow_html=True)
 
     atributos_eliminados, max_porcentaje, min_porcentaje = eliminacion_missing_value_ratio(X_train_std, X_test_std)
     # atributos_eliminados = 53
@@ -180,7 +182,9 @@ Dentro de este punto y dado que para muchos atributos el ratio de valores ausent
     st.write('&emsp;Porcentaje Mínimo: ', min_porcentaje, '%', unsafe_allow_html=True)
 
     st.markdown('''#### **Estrategias de Imputación de Valores Ausentes**
-De cara a poder realizar una comparativa posterior en base a las métricas de los distintos algoritmos, se han planteado tres estrategias de imputación de valores ausentes''')
+<div style="text-align: justify;">
+
+De cara a poder realizar una comparativa posterior en base a las métricas de los distintos algoritmos, se han planteado tres estrategias de imputación de valores ausentes</div>''', unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     
     with col1:
