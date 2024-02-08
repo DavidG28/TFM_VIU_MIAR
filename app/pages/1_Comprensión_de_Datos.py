@@ -246,6 +246,7 @@ with tab5:
 
     st.write('#### **:orange[Distribución de valores de atributos por clase:]**')
     st.markdown('''<div style="text-align: justify;">
+    
 + Se observa que no existe una clara distinción en lo que a distribución de valores de los distintos atributos según la clase se refiere, a excepción de 'tloans_pib_dif_abs2' y 'tdbtserv_pib_dif_abs2' de manera muy débil y principalmente de 'global_loan2' y 'global_drate'.
     
 + Incluso si nos limitamos a revisar el comportamiento de los atributos para las muestras asociadas a la clase 'pre-crisis' y su desviación típica, se observa que las variaciones en el rango histórico y geográfico han sido pequeñas. Ésto indicaría en parte que en el ámbito bajo estudio los indicadores de posible crisis serán bastante estables y concentrados.</div></br>''', unsafe_allow_html=True)
