@@ -51,7 +51,7 @@ with tab2:
              ' de ', data.shape[0],
              ' (', filtered_df['country'].nunique(),
              ' de ', data['country'].nunique(), ' países)')
-    st.write('&emsp;Número de Atributos: ', filtered_df.shape[1] - 1)
+    st.write('&emsp;Número de Atributos: ', filtered_df.shape[1] - 2)
     st.write('&emsp;Balance de Clases:&emsp;', 'No Crisis: ', round(filtered_df[filtered_df['crisisJST'] == 0].shape[0] / filtered_df.shape[0] * 100, 2), '%&emsp;Crisis: ', round(filtered_df[filtered_df['crisisJST'] == 1].shape[0] / filtered_df.shape[0] * 100, 2), '%', unsafe_allow_html=True)
     
     num_ausentes = filtered_df.isnull().sum()
@@ -164,7 +164,7 @@ with tab4:
     st.dataframe(data_final, height=180, use_container_width=True)
     
     # Mostramos métricas de interés
-    st.write('&emsp;Número de Atributos: ', data_final.shape[1] - 1, unsafe_allow_html=True)
+    st.write('&emsp;Número de Atributos: ', data_final.shape[1] - 2, unsafe_allow_html=True)
     st.write('&emsp;Balance de Clases:&emsp;', 'No Crisis: ', round(data_final[data_final['crisisJST'] == 0].shape[0] / data_final.shape[0] * 100, 2), '%&emsp;Pre-Crisis: ', round(data_final[data_final['crisisJST'] == 1].shape[0] / data_final.shape[0] * 100, 2), '%', unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col2:
