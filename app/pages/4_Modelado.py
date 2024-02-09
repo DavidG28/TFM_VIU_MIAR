@@ -97,10 +97,10 @@ Un punto importante a destacar y en el que debemos centrarnos, es el referido a 
 
 Para asegurar que se mantiene el buscado reparto equitativo de muestras en las particiones de entrenamiento, el proceso de balanceo debe realizarse directamente sobre la partición de entrenamiento de cada fold. Para ello se ha hecho uso de la librería “Imbalanced-learn”, en concreto de la utilidad “make_pipeline” que permite crear un estimador que sirva de entrada al proceso de entrenamiento concatenando para ello transformaciones, muestreos y el algoritmo concreto a usar. En este caso sólo se han concatenado el proceso de balanceo de datos (usando para ello cada una de las estrategias indicadas anteriormente), y el algoritmo de clasificación a usar.''')
 
+    st.write('</div>', unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col2:
         st.image('app/imagenes/pipeline.png')
-    st.write('</div>', unsafe_allow_html=True)
 
 with tab5:
     st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
