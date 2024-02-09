@@ -54,8 +54,7 @@ with tab2:
     st.write('&emsp;Número de Atributos: ', filtered_df.shape[1] - 2)
     st.write('&emsp;Balance de Clases (crisisJST):&emsp;', 'No Crisis: ', round(filtered_df[filtered_df['crisisJST'] == 0].shape[0] / filtered_df.shape[0] * 100, 2), '%&emsp;Crisis: ', round(filtered_df[filtered_df['crisisJST'] == 1].shape[0] / filtered_df.shape[0] * 100, 2), '%', unsafe_allow_html=True)
     
-    num_ausentes = filtered_df.loc[:, filtered_df.columns != 'crisisJST']
-    num_ausentes = num_ausentes.isnull().sum()
+    num_ausentes = filtered_df.loc[:, filtered_df.columns != 'crisisJST'].isnull().sum()
     porcentaje = round(num_ausentes / filtered_df.shape[0] * 100, 2)
     porcentaje.rename('Porcentaje de Valores Ausentes por Atributo', inplace=True)
     porcentaje.sort_values(ascending=False, inplace=True)
