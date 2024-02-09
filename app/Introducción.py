@@ -14,11 +14,15 @@ tab1, tab2, tab3 = st.tabs(['Objetivo y Definiciones', 'Puntos Importantes', 'Pr
 
 with tab1:
     st.markdown('''## **:orange[Objetivo]**
-#### <div style="text-align: justify; text-justify: inter-word">La finalidad del presente trabajo se centra en el uso de modelos de Inteligencia Artificial para poder predecir con un máximo de dos años de antelación posibles situaciones o indicadores que con el paso del tiempo  podrían concluir en escenarios de crisis financiera.</div>''', unsafe_allow_html=True)
+#### <div style="text-align: justify;">
+
+La finalidad del presente trabajo se centra en el uso de modelos de Inteligencia Artificial para poder predecir con un máximo de dos años de antelación posibles situaciones o indicadores que con el paso del tiempo  podrían concluir en escenarios de crisis financiera.</div>''', unsafe_allow_html=True)
 
     st.markdown('''## **:orange[Definiciones]**
 
-<div style="text-align: justify; text-justify: inter-word">El primer punto a abordar es definir qué entendemos por crisis financiera, algo que aunque pueda parecer sencillo, debido a todos los matices y escenarios que engloba no resulta una tarea simple. Tras realizar un análisis de la literatura especializada existente al respecto, la mayoría de expertos parecen coincidir en que la definición más adecuada de dicho concepto sería la recogida en el artículo <i>“Is the crisis problem growing more severe?” (Bordo et al., 2000)</i>:
+<div style="text-align: justify;">
+
+El primer punto a abordar es definir qué entendemos por crisis financiera, algo que aunque pueda parecer sencillo, debido a todos los matices y escenarios que engloba no resulta una tarea simple. Tras realizar un análisis de la literatura especializada existente al respecto, la mayoría de expertos parecen coincidir en que la definición más adecuada de dicho concepto sería la recogida en el artículo _“Is the crisis problem growing more severe?” (Bordo et al., 2000)_:
 
 #### "Se define crisis financiera como episodios de volatilidad en los mercados financieros marcados por importantes problemas de falta de liquidez e insolvencia entre los distintos actores participantes y/o por falta de intervención oficial/gubernamental para limitar las consecuencias"</div>''', unsafe_allow_html=True)
     
