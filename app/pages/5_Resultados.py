@@ -84,34 +84,34 @@ Vamos a revisar si efectivamente los coeficientes asociados a cada uno de los at
     with st.expander('+ :orange[Diferencial relativo del Índice de Precios al Consumo (coeficiente=1,55):]'):
         st.markdown('''<div style="text-align: justify;">
         
-    Como vemos coincide con lo expresado en el apartado de marco teórico acerca de que escenarios de alta/hiper-inflación pueden constituir un indicador de posible crisis financiera.</div>''', unsafe_allow_html=True)
+Como vemos coincide con lo expresado en el apartado de marco teórico acerca de que escenarios de alta/hiper-inflación pueden constituir un indicador de posible crisis financiera.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Diferencial absoluto del estado de Cuenta Corriente del país escalado por el Producto Interior Bruto (coeficiente=-0,86):]'):
         st.markdown('''<div style="text-align: justify;">
         
-    De igual forma, a peor estado de la cuenta corriente del país, mayor indicador de problemas de salud financiera.</div>''', unsafe_allow_html=True)
+De igual forma, a peor estado de la cuenta corriente del país, mayor indicador de problemas de salud financiera.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Ratio Tipos de Interes a Largo Plazo vs Corto Plazo (coeficiente=-0,43):]'):
         st.markdown('''<div style="text-align: justify;">
         
-    El signo negativo representaría una situación en la que los tipos de interés a corto plazo son superiores a los tipos a largo plazo y por tanto podrían indicar problemas económicos actuales.</div>''', unsafe_allow_html=True)
+El signo negativo representaría una situación en la que los tipos de interés a corto plazo son superiores a los tipos a largo plazo y por tanto podrían indicar problemas económicos actuales.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Aumento de Crédito Global (coeficiente=0,34):]'):
         st.markdown('''<div style="text-align: justify;">
         
-    Coincidiría con el hecho de que mayores niveles de crédito indican mayor necesidad de endeudamiento y por tanto menor fortaleza económica.</div>''', unsafe_allow_html=True)
+Coincidiría con el hecho de que mayores niveles de crédito indican mayor necesidad de endeudamiento y por tanto menor fortaleza económica.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Diferencial absoluto del Volumen de Crédito al sector privado escalado por el Producto Interior Bruto (coeficiente=0,24):]'):
         st.markdown('''<div style="text-align: justify;">
         
-    Al igual que en el punto anterior, mayores niveles de crédito indican mayor necesidad de endeudamiento y por tanto menor fortaleza económica.</div>''', unsafe_allow_html=True)
+Al igual que en el punto anterior, mayores niveles de crédito indican mayor necesidad de endeudamiento y por tanto menor fortaleza económica.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Curva de Rendimiento Global (Global Yield Curve) (coeficiente=-0,15):]'):
         st.markdown('''<div style="text-align: justify;">
         
-    Según los expertos, una pendiente plana o descendente de la curva de rendimiento es posible indicador de recesión, lo cual coincide con el signo del coeficiente obtenido.</div>''', unsafe_allow_html=True)
+Según los expertos, una pendiente plana o descendente de la curva de rendimiento es posible indicador de recesión, lo cual coincide con el signo del coeficiente obtenido.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Diferencial absoluto del ratio Volumen de Crédito al sector privado - Tipo de Interés a largo plazo (coeficiente=-0,03):]'):
         st.markdown('''<div style="text-align: justify;">
     
-    Sería indicativo de reducciones en el volumen de crédito disponible para el sector privado por parte del sector bancario, lo cual coincidiría con un posible indicativo de recesión económica.</div>''', unsafe_allow_html=True)
+Sería indicativo de reducciones en el volumen de crédito disponible para el sector privado por parte del sector bancario, lo cual coincidiría con un posible indicativo de recesión económica.</div>''', unsafe_allow_html=True)
