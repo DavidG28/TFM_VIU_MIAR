@@ -119,6 +119,8 @@ def calcular_atributos():
     else:
         st.warning('El año seleccionado pertenece a una situación de crisis o post-crisis', icon="⚠️")
         st.session_state.parar=True
+        st.session_state.expand2=False
+        vacio1.empty()
     
 
 
