@@ -76,26 +76,8 @@ with tab1:
 |56|ltd | Ratio préstamos/depósitos bancarios|
 |57|noncore | Ratio de financiación no básica bancaria|''')
 
-    atributos = pd.dataFrame({'Nombre de Atributo' : ['year', 'country', 'iso', 'ifs', 'pop', 'rgdpmad', 'rgdbarro', 'rconsbarro', 'gdp', 'iy', 'cpi', 'ca', 'imports', 'exports', 'narrowm', 'money', 
-                        'stir', 'ltrate', 'hpnom', 'unemp', 'wage' 'debtgdp', 'revenue', 'expenditure', 'xrusd', 'peg', 'peg_strict', 'JSTtrilemmaIV', 'tloans', 'tmort',
-                        'thh', 'tbus', 'bdebt', 'peg_type', 'peg_base', 'eq_tr', 'housing_tr', 'bond_tr', 'bill_rate', 'rent_ipolated', 'housing_capgain_ipolated',
-                        'housing_capgain', 'housing_rent_rtn', 'housing_rent_yd', 'eq_capgain', 'eq_dp', 'eq_capgain_interp', 'eq_tr_interp', 'eq_dp_interp', 'bond_rate',
-                        'eq_div_rtn', 'capital_tr', 'risky_tr', 'safe_tr', 'lev', 'ltd', 'noncore'], 'Descripción' : ['Año', 'País', 'Código ISO del país',
-                        'Código numérico del país', 'Población', 'PIB real per cápita (PPP, 1990 International Dollar)', 'PIB real per cápita (index, 2005=100)',
-                        'Consumo real per cápita', 'Producto Interior Bruto', 'Inversión ponderada por PIB', 'Índice de precios al consumo (IPC)',
-                        'Estado de cuenta corriente', 'Importaciones', 'Exportaciones', 'Agregado monetario estrecho (M1)', 'Agregado monetario amplio (M3)',
-                        'Tipo de interés a corto plazo', 'Tipo de interés a largo plazo', 'Precio de la vivienda', 'Tasa de desempleo',
-                        'Nivel salarial', 'Deuda pública ponderada por PIB', 'Ingresos públicos', 'Gastos públicos', 'Tipo de cambio vs Dólar', 'Precio/Beneficio',
-                        'Precio/Beneficio estricto', 'Cambios tasa base bruta', 'Créditos al sector privado', 'Créditos hipotecarios al sector privado',
-                        'Crédito a los hogares', 'Crédito a los negocios', 'Deuda corporativa', 'Precio/Beneficio tipo', 'Precio/Beneficio base',
-                        'Rentabilidad total del capital', 'Rentabilidad total de la vivienda', 'Rentabilidad del bono del estado', 'Tarifa de facturación',
-                        'Rentabilidad de la vivienda interpolado', 'Plusvalía de vivienda interpolado', 'Plusvalía de vivienda',
-                        'Retorno rentabilidad alquiler de vivienda', 'Rentabilidad alquiler de vivienda', 'Ganancia por acciones', 'Ganancia por dividendo',
-                        'Ganancia por acciones interpolado', 'Ganancia total por acciones interpolado', 'Ganancia por dividendo interpolado', 'Tipo bono del estado',
-                        'Retorno por dividendo', 'Retorno de riqueza', 'Retorno por activos de riesgo', 'Retorno por activos seguros', 'Ratio de capital bancario',
-                        'Ratio préstamos/depósitos bancarios', 'Ratio de financiación no básica bancaria']})
-
-     st.dataframe(atributos)
+    atributos = pd.dataFrame({'Nombre de Atributo' : ['year', 'country', 'iso', 'ifs', 'pop', 'rgdpmad', 'rgdbarro', 'rconsbarro', 'gdp', 'iy', 'cpi', 'ca', 'imports', 'exports', 'narrowm', 'money', 'stir', 'ltrate', 'hpnom', 'unemp', 'wage' 'debtgdp', 'revenue', 'expenditure', 'xrusd', 'peg', 'peg_strict', 'JSTtrilemmaIV', 'tloans', 'tmort', 'thh', 'tbus', 'bdebt', 'peg_type', 'peg_base', 'eq_tr', 'housing_tr', 'bond_tr', 'bill_rate', 'rent_ipolated', 'housing_capgain_ipolated', 'housing_capgain', 'housing_rent_rtn', 'housing_rent_yd', 'eq_capgain', 'eq_dp', 'eq_capgain_interp', 'eq_tr_interp', 'eq_dp_interp', 'bond_rate', 'eq_div_rtn', 'capital_tr', 'risky_tr', 'safe_tr', 'lev', 'ltd', 'noncore'], 'Descripción' : ['Año', 'País', 'Código ISO del país', 'Código numérico del país', 'Población', 'PIB real per cápita (PPP, 1990 International Dollar)', 'PIB real per cápita (index, 2005=100)', 'Consumo real per cápita', 'Producto Interior Bruto', 'Inversión ponderada por PIB', 'Índice de precios al consumo (IPC)', 'Estado de cuenta corriente', 'Importaciones', 'Exportaciones', 'Agregado monetario estrecho (M1)', 'Agregado monetario amplio (M3)', 'Tipo de interés a corto plazo', 'Tipo de interés a largo plazo', 'Precio de la vivienda', 'Tasa de desempleo', 'Nivel salarial', 'Deuda pública ponderada por PIB', 'Ingresos públicos', 'Gastos públicos', 'Tipo de cambio vs Dólar', 'Precio/Beneficio', 'Precio/Beneficio estricto', 'Cambios tasa base bruta', 'Créditos al sector privado', 'Créditos hipotecarios al sector privado', 'Crédito a los hogares', 'Crédito a los negocios', 'Deuda corporativa', 'Precio/Beneficio tipo', 'Precio/Beneficio base', 'Rentabilidad total del capital', 'Rentabilidad total de la vivienda', 'Rentabilidad del bono del estado', 'Tarifa de facturación', 'Rentabilidad de la vivienda interpolado', 'Plusvalía de vivienda interpolado', 'Plusvalía de vivienda', 'Retorno rentabilidad alquiler de vivienda', 'Rentabilidad alquiler de vivienda', 'Ganancia por acciones', 'Ganancia por dividendo', 'Ganancia por acciones interpolado', 'Ganancia total por acciones interpolado', 'Ganancia por dividendo interpolado', 'Tipo bono del estado', 'Retorno por dividendo', 'Retorno de riqueza', 'Retorno por activos de riesgo', 'Retorno por activos seguros', 'Ratio de capital bancario', 'Ratio préstamos/depósitos bancarios', 'Ratio de financiación no básica bancaria']})
+    st.dataframe(atributos)
  
 with tab2:
     st.write('## **:orange[Características Raw Dataset:]**')
