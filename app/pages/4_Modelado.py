@@ -86,6 +86,7 @@ El funcionamiento se puede ver de manera gráfica en la siguiente imagen:</div>'
     
         with col3:
             st.write('''<div style="text-align: justify;">
+            
 **:orange[Random Undersampling:]** a diferencia de los dos casos anteriores, esta técnica consiste en un “submuestreo” o “undersampling” de las muestras asociadas a la clase mayoritaria, manteniendo inalterado el número de muestras correspondientes a la clase minoritaria. Como consecuencia se reduce enórmemente el número de muestras útiles.</div>''', unsafe_allow_html=True)
         
         with col4:
