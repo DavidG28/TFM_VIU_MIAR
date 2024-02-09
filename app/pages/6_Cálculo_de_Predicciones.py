@@ -121,6 +121,7 @@ def calcular_atributos():
         st.session_state.parar=True
         st.session_state.expand2=False
         vacio1.empty()
+        vacio1.button('Reiniciar', on_click=recargar, type="primary")
     
 
 
