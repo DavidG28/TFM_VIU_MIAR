@@ -97,7 +97,7 @@ with tab3:
 
 A partir de los datos anteriores se procede a la elaboración de los siguientes nuevos atributos que serán los finalmente usados como base para el proceso de entrenamiento. **:orange[Se usarán indicadores relativos calculados a partir de los datos macroeconómicos, ya que por lo general ofrecen mayor información que los valores absolutos en sí.
     
-A modo de ejemplo: el precio de la vivienda a lo largo del tiempo ha ido creciendo, pero ¿podríamos decir de forma categórica si el precio actual es alto o no sin tomar ningún otro indicador como referencia? En principio sería complicado, pero si por ejemplo calculamos un crecimiento interanual de dicho precio en un 100%, sí podríamos indicar que se ha producido un acusado aumento de los precios].</div>''', unsafe_allow_html=True)
+A modo de ejemplo: el precio de la vivienda a lo largo del tiempo ha ido creciendo, pero ¿podríamos decir de forma categórica si el precio actual es alto o no sin tomar ningún otro indicador como referencia? En principio sería complicado, pero si por ejemplo calculamos un crecimiento interanual de dicho precio en un 100%, sí podríamos indicar que se ha producido un acusado aumento de los precios]**.</div>''', unsafe_allow_html=True)
     
     with st.expander('+ :orange[Diferencial relativo del Índice de Precios al Consumo] - (cpi_dif_por2)'):
         st.markdown('''<div style="text-align: justify;">
