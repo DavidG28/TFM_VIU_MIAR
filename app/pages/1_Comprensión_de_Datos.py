@@ -76,13 +76,12 @@ with tab1:
 |56|ltd | Ratio préstamos/depósitos bancarios|
 |57|noncore | Ratio de financiación no básica bancaria|''')
 
-    atributos = pd.dataFrame(
-{'Nombre de Atributo' : ['year', 'country', 'iso', 'ifs', 'pop', 'rgdpmad', 'rgdbarro', 'rconsbarro', 'gdp', 'iy', 'cpi', 'ca', 'imports', 'exports', 'narrowm', 'money', 
+    atributos = pd.dataFrame({'Nombre de Atributo' : ['year', 'country', 'iso', 'ifs', 'pop', 'rgdpmad', 'rgdbarro', 'rconsbarro', 'gdp', 'iy', 'cpi', 'ca', 'imports', 'exports', 'narrowm', 'money', 
                         'stir', 'ltrate', 'hpnom', 'unemp', 'wage' 'debtgdp', 'revenue', 'expenditure', 'xrusd', 'peg', 'peg_strict', 'JSTtrilemmaIV', 'tloans', 'tmort',
                         'thh', 'tbus', 'bdebt', 'peg_type', 'peg_base', 'eq_tr', 'housing_tr', 'bond_tr', 'bill_rate', 'rent_ipolated', 'housing_capgain_ipolated',
                         'housing_capgain', 'housing_rent_rtn', 'housing_rent_yd', 'eq_capgain', 'eq_dp', 'eq_capgain_interp', 'eq_tr_interp', 'eq_dp_interp', 'bond_rate',
-                        'eq_div_rtn', 'capital_tr', 'risky_tr', 'safe_tr', 'lev', 'ltd', 'noncore'], 
- 'Descripción' : ['Año', 'País', 'Código ISO del país', 'Código numérico del país', 'Población', 'PIB real per cápita (PPP, 1990 International Dollar)',
+                        'eq_div_rtn', 'capital_tr', 'risky_tr', 'safe_tr', 'lev', 'ltd', 'noncore'],
+                              'Descripción' : ['Año', 'País', 'Código ISO del país','Código numérico del país', 'Población', 'PIB real per cápita (PPP, 1990 International Dollar)',
                   'PIB real per cápita (index, 2005=100)', 'Consumo real per cápita', 'Producto Interior Bruto', 'Inversión ponderada por PIB',
                   'Índice de precios al consumo (IPC)', 'Estado de cuenta corriente', 'Importaciones', 'Exportaciones', 'Agregado monetario estrecho (M1)',
                   'Agregado monetario amplio (M3)', 'Tipo de interés a corto plazo', 'Tipo de interés a largo plazo', 'Precio de la vivienda', 'Tasa de desempleo',
