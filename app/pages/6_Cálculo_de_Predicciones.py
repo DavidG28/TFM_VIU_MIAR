@@ -130,7 +130,6 @@ def calcular_prediccion():
     st.session_state.expand3=True
     
     vacio1.empty()
-    vacio1.button('Reiniciar', on_click=recargar, type="primary")
     data_aux = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
     data_aux = data_aux[(data_aux['iso']==st.session_state.iso1) & (data_aux['year']==int(st.session_state.year2))]
 
