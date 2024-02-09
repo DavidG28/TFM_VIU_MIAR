@@ -11,11 +11,10 @@ st.sidebar.image(logo_url)
 
 st.title('Modelado')
 
-st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
-
 tab1, tab2, tab3, tab4, tab5 = st.tabs(['Algoritmos Seleccionados', 'Particionado Interno', 'Técnicas de Balanceo de Datos', 'Pipeline', 'Métricas de Evaluación'])
 
 with tab1:
+    st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
     st.markdown('''## **:orange[Algoritmos Selecionados]**
 De cara al diseño del modelo predictivo, se han seleccionado los siguientes algoritmos:''')
     
@@ -40,8 +39,10 @@ De cara al diseño del modelo predictivo, se han seleccionado los siguientes alg
 El cálculo de los pesos y sesgos se realiza mediante el proceso de retropropagación o backward propagation, cuyo objetivo consiste en minimizar una función de pérdidas que representa las diferencias entre los valores predichos y los reales.''')
 
     st.markdown('''En todos los casos a excepción de los modelos basados en redes neuronales, se ha hecho uso de GridSearchCV para la obtención de los mejores hiperparámetros de entre todos los proporcionados como entrada. Una vez obtenidos estos hiperparámetros se ha procedido a entrenar el modelo con el conjunto completo de datos de entrenamiento.''')
-
-with tab2:    
+    st.write('</div>', unsafe_allow_html=True)
+    
+with tab2:
+    st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
     st.markdown('''## **:orange[Particionado Interno]**
     
 Como ocurría durante la realización del particionado externo (Hold-out), durante la creación de los folds para la realización de cross-validation o de particionado interno en particiones de entrenamiento y validación, hay que asegurar que no se produce fuga de datos, es decir, garantizar que en las particiones de entrenamiento no existen datos asociados a instantes posteriores a los contenidos en las particiones de validación. Además dado el gran desbalance de muestras entre clases, hay que garantizar también la existencia de muestras de ambas clases en todas las particiones.
@@ -50,8 +51,10 @@ Por este motivo se ha creado una función customizada para la creación de las d
     col1, col2, col3 = st.columns(3)
     with col2:
         st.image('app/imagenes/folds.png')
+    st.write('</div>', unsafe_allow_html=True)
 
 with tab3:
+    st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
     st.markdown('''## **:orange[Técnicas de Balanceo de Datos]**
 Dado el desbalance en lo que a número de muestras asociadas a cada clase respecta, es necesario aplicar algún tipo de estrategia para conseguir un número equitativo de muestras en cada clase. Para ello se han aplicado las siguientes metodologías a cada uno de los algoritmos indicados en el punto anterior:''')
     with st.container():
@@ -84,8 +87,10 @@ El funcionamiento se puede ver de manera gráfica en la siguiente imagen:''')
     
         with col4:
             st.write("")
+    st.write('</div>', unsafe_allow_html=True)
 
 with tab4:
+    st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
     st.markdown('''## **:orange[Pipeline]**
     
 Un punto importante a destacar y en el que debemos centrarnos, es el referido a cuándo se debe realizar el proceso de balanceo de los datos en el caso de usar cross-validation. Si dicho proceso se aplica directamente sobre el conjunto de datos de entrenamiento sobre el cual a su vez se aplicará posteriormente una función para el reparto en folds, este proceso no garantiza que en las particiones finales de entrenamiento se mantenga dicho reparto equilibrado de muestras, por lo que no habría sido de utilidad.
@@ -95,9 +100,10 @@ Para asegurar que se mantiene el buscado reparto equitativo de muestras en las p
     col1, col2, col3 = st.columns(3)
     with col2:
         st.image('app/imagenes/pipeline.png')
-
+    st.write('</div>', unsafe_allow_html=True)
 
 with tab5:
+    st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
     st.markdown('''## **:orange[Métricas de Evaluación]**
     
 En casos como el presente u otros parecidos (como pueden ser detección de fraude, anomalías, etc.), donde el volumen de muestras de la clase minoritaria es muy bajo comparado con el de muestras de la clase mayoritaria, lo que se suele buscar es una métrica que maximice el número de verdaderos positivos, pero manteniendo un equilibrio con el número de falsos positivos, los cuales estarían representando falsas alarmas que deberían ser revisadas con los posibles costes asociados que ésto podría suponer.
@@ -114,4 +120,4 @@ En este caso consideraremos que ambas situaciones (falso positivo y falso negati
     with col3:
         st.image('app/graficas/PR_curve.png')
 
-st.write('</div>', unsafe_allow_html=True)
+    st.write('</div>', unsafe_allow_html=True)
