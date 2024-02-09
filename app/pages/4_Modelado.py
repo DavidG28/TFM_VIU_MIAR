@@ -11,6 +11,8 @@ st.sidebar.image(logo_url)
 
 st.title('Modelado')
 
+st.write('<div style="text-align: justify;">', unsafe_allow_html=True)
+
 tab1, tab2, tab3, tab4, tab5 = st.tabs(['Algoritmos Seleccionados', 'Particionado Interno', 'Técnicas de Balanceo de Datos', 'Pipeline', 'Métricas de Evaluación'])
 
 with tab1:
@@ -112,3 +114,4 @@ En este caso consideraremos que ambas situaciones (falso positivo y falso negati
     with col3:
         st.image('app/graficas/PR_curve.png')
 
+st.write('</div>', unsafe_allow_html=True)
