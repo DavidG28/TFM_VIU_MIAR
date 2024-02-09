@@ -94,7 +94,7 @@ with tab1:
                   'Retorno rentabilidad alquiler de vivienda', 'Rentabilidad alquiler de vivienda', 'Ganancia por acciones', 'Ganancia por dividendo',
                   'Ganancia por acciones interpolado', 'Ganancia total por acciones interpolado', 'Ganancia por dividendo interpolado', 'Tipo bono del estado',
                   'Retorno por dividendo', 'Retorno de riqueza', 'Retorno por activos de riesgo', 'Retorno por activos seguros', 'Ratio de capital bancario',
-                  'Ratio préstamos/depósitos bancarios', 'Ratio de financiación no básica bancaria`]})
+                  'Ratio préstamos/depósitos bancarios', 'Ratio de financiación no básica bancaria']})
 
  st.dataframe(atributos)
  
