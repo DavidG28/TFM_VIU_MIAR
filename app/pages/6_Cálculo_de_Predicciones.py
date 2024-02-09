@@ -83,15 +83,14 @@ def aplica_filtros():
     st.session_state.iy2=filtered_df2['iy'].iloc[0]
     st.session_state.rconsbarro2=filtered_df2['rconsbarro'].iloc[0]
     st.session_state.narrowm2=filtered_df2['narrowm'].iloc[0]
-    if st.session_state.estado == 0:
+    if st.session_state.parar:
+            vacio1.button('Reiniciar', on_click=recargar, type="primary")
+    elif st.session_state.estado == 0:
         vacio1.button('Calcular Atributos', on_click=calcular_atributos, type="primary")
         st.session_state.estado = 1
     elif st.session_state.estado == 1:
-        if st.session_state.parar:
-            vacio1.button('Reiniciar', on_click=recargar, type="primary")
-        else:
-            vacio1.button('Calcular Predicción', on_click=calcular_prediccion, type="primary")
-            st.session_state.estado = 2
+        vacio1.button('Calcular Predicción', on_click=calcular_prediccion, type="primary")
+        st.session_state.estado = 2
     else:
         vacio1.button('Reiniciar', on_click=recargar, type="primary")
 
