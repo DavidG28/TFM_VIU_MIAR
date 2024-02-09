@@ -14,6 +14,7 @@ tab1, tab2, tab3 = st.tabs(['Objetivo y Definiciones', 'Puntos Importantes', 'Pr
 
 with tab1:
     st.markdown('''## **:orange[Objetivo]**
+    
 <div style="text-align: justify;">
 
 #### La finalidad del presente trabajo se centra en el uso de modelos de Inteligencia Artificial para poder predecir con un máximo de dos años de antelación posibles situaciones o indicadores que con el paso del tiempo  podrían concluir en escenarios de crisis financiera.</div>''', unsafe_allow_html=True)
