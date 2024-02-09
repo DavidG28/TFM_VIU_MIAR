@@ -96,7 +96,7 @@ with tab1:
                   'Retorno por dividendo', 'Retorno de riqueza', 'Retorno por activos de riesgo', 'Retorno por activos seguros', 'Ratio de capital bancario',
                   'Ratio préstamos/depósitos bancarios', 'Ratio de financiación no básica bancaria']})
 
- st.dataframe(atributos)
+     st.dataframe(atributos)
  
 with tab2:
     st.write('## **:orange[Características Raw Dataset:]**')
