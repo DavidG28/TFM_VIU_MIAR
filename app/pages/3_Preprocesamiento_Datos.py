@@ -189,8 +189,7 @@ Dentro de este punto, el primer paso será **:orange[eliminar aquellas caracter�
     
     with col1:
         X_train_std_deleted, y_train_deleted, X_test_std_deleted, y_test_deleted = elimina_ausentes(X_train_std, y_train, X_test_std, y_test)
-        st.write('''##### **:orange[Eliminación de instancias con valores ausentes:]**
-&nbsp;''', unsafe_allow_html=True)
+        st.write('''##### **:orange[Eliminación de instancias con valores ausentes:]**''', unsafe_allow_html=True)
         st.write('&emsp;Tamaño Original Partición: ', X_train_std.shape, unsafe_allow_html=True)
         st.write('&emsp;Tamaño Final Partición: ', X_train_std_deleted.shape, unsafe_allow_html=True)
     with col2:
@@ -251,13 +250,15 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
             st.write(atributos_discriminativos_deleted)
             
         with col2:
-            st.write('##### **:orange[Valores ausentes con valor medio:]**')
+            st.write('''##### **:orange[Valores ausentes con valor medio:]**
+    &nbsp;''', unsafe_allow_html=True)
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_media.shape[1])
             st.image('app/graficas/disc_media.png')
             st.write(atributos_discriminativos_media)
             
         with col3:
-            st.write('##### **:orange[Valores ausentes con KNN:]**')
+            st.write('''##### **:orange[Valores ausentes con KNN:]**
+    &nbsp;''', unsafe_allow_html=True)
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_knn.shape[1])
             st.image('app/graficas/disc_knn.png')
             st.write(atributos_discriminativos_knn)
@@ -271,10 +272,12 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
             st.image('app/graficas/corr_deleted.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col2:
-            st.write('##### **:orange[Valores ausentes con valor medio:]**')
+            st.write('''##### **:orange[Valores ausentes con valor medio:]**
+    &nbsp;''', unsafe_allow_html=True)
             st.image('app/graficas/corr_media.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col3:
-            st.write('##### **:orange[Valores ausentes con KNN:]**')
+            st.write('''##### **:orange[Valores ausentes con KNN:]**
+    &nbsp;''', unsafe_allow_html=True)
             st.image('app/graficas/corr_knn.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
