@@ -15,17 +15,17 @@ tab1, tab2, tab3, tab4 = st.tabs(['Mejores Algoritmos', 'Matrices de Confusión'
 
 with tab1:
     st.markdown('''## **:orange[Mejores Algoritmos]**
-Durante el proceso de entrenamiento se han usado un total de sesenta y nueve modelos, correspondientes a todas las posibles combinaciones formadas por las:
+**:orange[Durante el proceso de entrenamiento se han usado un total de sesenta y nueve modelos]**, correspondientes a todas las posibles combinaciones formadas por las:
 
 + Estrategias de imputación de valores ausentes.
 + Estrategias de balanceo de datos.
 + Algoritmos seleccionados.
 
-Centrándonos en las estrategias de imputación de valores ausentes, los modelos con mejores resultados para cada una de ellas han sido:
+Centrándonos en las estrategias de imputación de valores ausentes, **:orange[los modelos con mejores resultados]** para cada una de ellas han sido:
 
-+ Regresión Logística con Random Oversampling para eliminación de valores ausentes.
-+ Perceptrón Multicapa con Random Oversampling para imputación de valores ausentes por valor medio del atributo.
-+ Support Vector Classifier con balance de pesos para imputación de valores ausentes mediante KNN.
++ **Regresión Logística con Random Oversampling para eliminación de valores ausentes.**
++ **Perceptrón Multicapa con Random Oversampling para imputación de valores ausentes por valor medio del atributo.**
++ **Support Vector Classifier con balance de pesos para imputación de valores ausentes mediante KNN.**
 
 Las métricas obtenidas en cada caso han sido:''')
     
@@ -34,7 +34,7 @@ Las métricas obtenidas en cada caso han sido:''')
 
     st.dataframe(tabla_mejores_modelos)
 
-    st.write('Basándonos en el valor de la métrica seleccionada para evaluar los modelos ("average_precision_score”), el mejor modelo final sería Regresión Logística con Random Oversampling y eliminación de valores ausentes.')
+    st.write('**:orange[Basándonos en el valor de la métrica seleccionada]** para evaluar los modelos ("average_precision_score”), **:orange[el mejor modelo final sería Regresión Logística con Random Oversampling y eliminación de valores ausentes]**.')
 
 with tab2:    
     st.markdown('''## **:orange[Matrices de confusión]**
@@ -51,7 +51,7 @@ Para cada uno de los mejores modelos, las matrices de confusión obtenidas han s
 
     st.markdown('''<div style="text-align: justify;">
     
-En ellas se puede ver claramente el trade-off entre fiabilidad a la hora de no pasar por alto ningún posible indicador de posible crisis futura (verdadero positivo en este caso), frente al nivel de falsos positivos generados.
+En ellas se puede ver claramente el **:orange[trade-off entre fiabilidad a la hora de no pasar por alto ningún posible indicador de posible crisis futura (verdadero positivo en este caso), frente al nivel de falsos positivos generados]**.
 
 Como se puede observar, el primer y tercer modelo aciertan todas las muestras de “pre-crisis” de la partición de test, mientras que el segundo falla en ocho de los casos. Sin embargo el segundo modelo tiene un nivel de falsos positivos bastante menor que los otros dos casos.
 
@@ -61,7 +61,7 @@ with tab3:
     st.markdown('''## **:orange[Predicciones]**
 <div style="text-align: justify;">
 
-Si nos centramos en dicho modelo, podemos revisar en qué muestras se han producido los errores y aciertos (los años ausentes corresponden a aquellos asociados a crisis o post-crisis, que fueron eliminados al inicio para evitar la introducción de sesgo):</div>''', unsafe_allow_html=True)
+Si nos centramos en dicho modelo, podemos revisar en qué muestras se han producido los errores (**:red[rojo]**) y aciertos (**:green[verde]**). Los años ausentes corresponden a aquellos asociados a crisis o post-crisis, que fueron eliminados al inicio para evitar la introducción de sesgo):</div>''', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
     with col2:
@@ -77,9 +77,9 @@ with tab4:
     st.markdown('''## **:orange[Interpretabilidad]**
 <div style="text-align: justify;">
     
-Una de las ventajas del modelo de Regresión Logística es su interpretabilidad, ya que evaluando los coeficientes asociados a la función logística podemos determinar qué atributos son más o menos importantes y con qué tipo de relación (directa o inversa). 
+Una de las **:orange[ventajas del modelo de Regresión Logística es su interpretabilidad]**, ya que evaluando los coeficientes asociados a la función logística podemos determinar qué atributos son más o menos importantes y con qué tipo de relación (directa o inversa). 
 
-Vamos a revisar si efectivamente los coeficientes asociados a cada uno de los atributos discriminativos (ordenados de mayor a menor importancia), concuerdan en su tipo de relación con el marco teórico expuesto:</div>''', unsafe_allow_html=True)
+**:orange[Vamos a revisar si efectivamente los coeficientes asociados a cada uno de los atributos discriminativos]** (ordenados de mayor a menor importancia), **:orange[concuerdan en su tipo de relación con el marco teórico expuesto]**:</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Diferencial relativo del Índice de Precios al Consumo (coeficiente=1,55):]'):
         st.markdown('''<div style="text-align: justify;">
