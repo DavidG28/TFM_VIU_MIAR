@@ -250,15 +250,13 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
             st.write(atributos_discriminativos_deleted)
             
         with col2:
-            st.write('''##### **:orange[Valores ausentes con valor medio:]**
-&nbsp;''', unsafe_allow_html=True)
+            st.write('##### **:orange[Valores ausentes con valor medio:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_media.shape[1])
             st.image('app/graficas/disc_media.png')
             st.write(atributos_discriminativos_media)
             
         with col3:
-            st.write('''##### **:orange[Valores ausentes con KNN:]**
-&nbsp;''', unsafe_allow_html=True)
+            st.write('##### **:orange[Valores ausentes con KNN:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_knn.shape[1])
             st.image('app/graficas/disc_knn.png')
             st.write(atributos_discriminativos_knn)
@@ -272,12 +270,10 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
             st.image('app/graficas/corr_deleted.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col2:
-            st.write('''##### **:orange[Valores ausentes con valor medio:]**
-&nbsp;''', unsafe_allow_html=True)
+            st.write('##### **:orange[Valores ausentes con valor medio:]**')
             st.image('app/graficas/corr_media.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col3:
-            st.write('''##### **:orange[Valores ausentes con KNN:]**
-&nbsp;''', unsafe_allow_html=True)
+            st.write('##### **:orange[Valores ausentes con KNN:]**')
             st.image('app/graficas/corr_knn.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
