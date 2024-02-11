@@ -224,7 +224,7 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
 + Para cada atributo se realiza un estudio para **:orange[determinar si sigue o no una distribución normal mediante la prueba de Kolmogorov-Smirnov]**.
 + En caso de **:orange[no seguir una distribución normal, se realiza una comparativa de las medianas]** de los atributos para las muestras asociadas a cada clase **:orange[(prueba U de Mann-Whitney)]**.
 + En caso de seguir una **:orange[distribución normal, se realiza una comparativa de las medias]** de los atributos para las muestras asociadas a cada clase **:orange[(prueba T de Student)]**.
-&nbsp;</div>''', unsafe_allow_html=True)
+<br></div>''', unsafe_allow_html=True)
 
     with open('preprocesadores/nuevos_atributos.pkl', 'rb') as f:
         nuevos_atributos = pickle.load(f)
