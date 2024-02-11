@@ -256,7 +256,7 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
             st.write(atributos_discriminativos_media)
             
         with col3:
-            st.write('##### **:orange[Imputación de valores ausentes con KNN:]**')
+            st.write('##### **:orange[Imputación de valores ausentes mediante algoritmo KNN:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_knn.shape[1])
             st.image('app/graficas/disc_knn.png')
             st.write(atributos_discriminativos_knn)
@@ -274,6 +274,6 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
             st.image('app/graficas/corr_media.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col3:
-            st.write('##### **:orange[Imputación de valores ausentes con KNN:]**')
+            st.write('##### **:orange[Imputación de valores ausentes mediante algoritmo KNN:]**')
             st.image('app/graficas/corr_knn.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
