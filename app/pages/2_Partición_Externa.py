@@ -8,22 +8,29 @@ logo_url = 'app/imagenes/logo.png'
 st.sidebar.image(logo_url)
 
 st.title('Partición de Datos Externa (Hold-Out)')
-st.markdown('''<div style="text-align: justify;">
+
+tab1, tab2 = st.tabs(['Condicionantes', 'Resultados'])
+with tab1:
+  st.markdown('''## **:orange[Condicionantes]**
+<div style="text-align: justify;">
 
 Se va a comenzar realizando la partición de datos externa para separar el conjunto de datos total en los subconjuntos de entrenamiento (train), y prueba (test).
-Dado que estamos ante un problema de series temporales, se requiere mantener la coherencia temporal por lo que:
+**:orange[Dado que estamos ante un problema de series temporales, se requiere mantener la coherencia temporal]** por lo que:
 
 * No se aplicará shuffle a los datos.
-* En este caso asegurar que datos de entrenamiento no se localizan entre los datos de test, no sólo se limita a las instancias individuales en sí, sino que dado que nuestro objetivo será predecir si en un cierto año y para un determinado país se está ante una posible situación de pre-crisis, también tenemos que asegurar que no existe información relativa a años posteriores en nuestro conjunto de test ni para el país bajo estudio en concreto ni tampoco para otros paises (*Hellwig, K.P. (2021). Predicting Fiscal Crises: A Machine Learning Approach*).
-* Para cumplir lo anterior se particionará el dataset a partir de un año concreto manteniendo los valores más cercanos a una distribución de porcentajes igual al 80% para datos de entrenamiento y 20% para datos de prueba.</div>''', unsafe_allow_html=True)
+* En este caso asegurar que datos de entrenamiento no se localizan entre los datos de test, no sólo se limita a las instancias individuales en sí, sino que dado que nuestro objetivo será predecir si en un cierto año y para un determinado país se está ante una posible situación de pre-crisis, **:orange[también tenemos que asegurar que no existe información relativa a años posteriores en nuestro conjunto de test ni para el país bajo estudio en concreto ni tampoco para otros paises]** (*Hellwig, K.P. (2021). Predicting Fiscal Crises: A Machine Learning Approach*).
+* Para cumplir lo anterior **:orange[se particionará el dataset a partir de un año concreto]** manteniendo los valores más cercanos a una distribución de porcentajes igual al 80% para datos de entrenamiento y 20% para datos de prueba.</div>''', unsafe_allow_html=True)
+with tab2:
+  # Cargamos nuestro dataset
+  data = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
 
-# Cargamos nuestro dataset
-data = pd.read_csv('datasets/finales/data_final.csv', sep=';', na_values='', decimal=',')
+  st.markdown('''## **:orange[Condicionantes]**
+<div style="text-align: justify;">
 
-st.write(' Se tendrá que tener en cuenta que las instancias para cada año no son iguales en el dataset final para mantener un porcentaje 80%-20% adecuado:')
+Se tendrá que tener en cuenta que las instancias para cada año no son iguales en el dataset final para mantener un porcentaje 80%-20% adecuado:</div>''', unsafe_allow_html=True)
 
-st.write('**:orange[Cálculos para Particionado:]**')
-pct_train = 0.8
+  st.write('**:orange[Cálculos para Particionado:]**')
+  pct_train = 0.8
 
 num_paises = len(np.unique(data['iso']))
 st.write('&emsp;Número Total de Países: ', num_paises)
