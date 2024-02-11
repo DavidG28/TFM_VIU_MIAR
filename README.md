@@ -1,9 +1,10 @@
-# TFM Máster en Inteligencia Artificial Universidad Internacional de Valencia 2023/24
-Autor: David García García
+# TFM Máster en Inteligencia Artificial
+# Universidad Internacional de Valencia Curso: 2023-2024
+##Autor: David García García
 
 El presente repositorio contiene todo el código creado para el desarrollo de un modelo de Aprendizaje Automático que habilite la posibilidad de detectar de manera temprana posibles situaciones o indicadores que con el paso del tiempo (y si no se acomete ningún tipo de acción correctora), pudieran derivar en situaciones de crisis financiera, con un periodo de preaviso máximo de dos años.
 
-El contenido está organizado en dos parte:
+El contenido está organizado en dos partes:
 
 **Jupyter Notebooks:** todos los procesos de exploración de datos, particionado, preprocesamiento, entrenamiento y evaluación de modelos han sido desarrollados y documentados en un grupo de cuatro Jupyter Notebooks.
 
