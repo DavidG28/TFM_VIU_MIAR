@@ -32,30 +32,30 @@ Se tendrá que tener en cuenta que las instancias para cada año no son iguales 
   st.write('**:orange[Cálculos para Particionado:]**')
   pct_train = 0.8
 
-num_paises = len(np.unique(data['iso']))
-st.write('&emsp;Número Total de Países: ', num_paises)
+  num_paises = len(np.unique(data['iso']))
+  st.write('&emsp;Número Total de Países: ', num_paises)
 
-num_anios = len(np.unique(data['year']))
-st.write('&emsp;Número Total de Años: ', num_anios)
+  num_anios = len(np.unique(data['year']))
+  st.write('&emsp;Número Total de Años: ', num_anios)
 
-instancias_test = data.shape[0] * (1 - pct_train)
+  instancias_test = data.shape[0] * (1 - pct_train)
 
-anio_particion = int((data['year'].max() - (instancias_test/num_paises))) - 2
-st.write('&emsp;Año de Particionado: ', anio_particion)
+  anio_particion = int((data['year'].max() - (instancias_test/num_paises))) - 2
+  st.write('&emsp;Año de Particionado: ', anio_particion)
 
-train = data[data['year'] < anio_particion]
-test = data[data['year'] >= anio_particion]
+  train = data[data['year'] < anio_particion]
+  test = data[data['year'] >= anio_particion]
 
-_, ocurrencias_train = np.unique(train['crisisJST'], return_counts=True)
-_, ocurrencias_test = np.unique(test['crisisJST'], return_counts=True)
+  _, ocurrencias_train = np.unique(train['crisisJST'], return_counts=True)
+  _, ocurrencias_test = np.unique(test['crisisJST'], return_counts=True)
 
-etiquetas = ['No Crisis: ', 'Pre-Crisis: ']
+  etiquetas = ['No Crisis: ', 'Pre-Crisis: ']
 
-st.write('**:orange[Muestras de Entrenamiento:]** (', round(train.shape[0] * 100 / data.shape[0], 2), '%) &emsp;', etiquetas[0], ocurrencias_train[0], ' &emsp; ',etiquetas[1], ocurrencias_train[1], unsafe_allow_html=True)
+  st.write('**:orange[Muestras de Entrenamiento:]** (', round(train.shape[0] * 100 / data.shape[0], 2), '%) &emsp;', etiquetas[0], ocurrencias_train[0], ' &emsp; ',etiquetas[1], ocurrencias_train[1], unsafe_allow_html=True)
 
-st.write('**:orange[Partición de Entrenamiento:]**')
-st.dataframe(train, height=180)
-st.write('**:orange[Muestras de Test:]** (', round(test.shape[0] * 100 / data.shape[0], 2), '%) &emsp;', etiquetas[0], ocurrencias_test[0], ' &emsp; ', etiquetas[1], ocurrencias_test[1], unsafe_allow_html=True)
-st.write('**:orange[Partición de Test:]**')
-st.dataframe(test, height=180)
+  st.write('**:orange[Partición de Entrenamiento:]**')
+  st.dataframe(train, height=180)
+  st.write('**:orange[Muestras de Test:]** (', round(test.shape[0] * 100 / data.shape[0], 2), '%) &emsp;', etiquetas[0], ocurrencias_test[0], ' &emsp; ', etiquetas[1], ocurrencias_test[1], unsafe_allow_html=True)
+  st.write('**:orange[Partición de Test:]**')
+  st.dataframe(test, height=180)
 
