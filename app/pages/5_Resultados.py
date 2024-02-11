@@ -23,9 +23,9 @@ with tab1:
 
 Centrándonos en las estrategias de imputación de valores ausentes, **:orange[los modelos con mejores resultados]** para cada una de ellas han sido:
 
-+ **Regresión Logística con Random Oversampling para eliminación de valores ausentes.**
-+ **Perceptrón Multicapa con Random Oversampling para imputación de valores ausentes por valor medio del atributo.**
-+ **Support Vector Classifier con balance de pesos para imputación de valores ausentes mediante KNN.**
++ **:orange[Regresión Logística con Random Oversampling para eliminación de valores ausentes.]**
++ **:orange[Perceptrón Multicapa con Random Oversampling para imputación de valores ausentes por valor medio del atributo.]**
++ **:orange[Support Vector Classifier con balance de pesos para imputación de valores ausentes mediante KNN.]**
 
 Las métricas obtenidas en cada caso han sido:''')
     
