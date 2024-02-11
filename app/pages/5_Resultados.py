@@ -69,7 +69,7 @@ Si nos centramos en dicho modelo, podemos revisar en qué muestras se han produc
     
     st.markdown('''<div style="text-align: justify;">
     
-Como se puede observar **:orange[muchos errores se localizan en el año 2020, año de la pandemia de COVID-19]** y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. **:orange[Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable]**, dado que sabemos que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, con lo que la predicción del modelo podría considerarse correcta.</div>''', unsafe_allow_html=True)
+Como se puede observar **:orange[muchos errores se localizan en el año 2020, año de la pandemia de COVID-19]** y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. **:orange[Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable]**, dado que sabemos que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, **:orange[con lo que la predicción del modelo podría considerarse correcta]**.</div>''', unsafe_allow_html=True)
 
 
 
