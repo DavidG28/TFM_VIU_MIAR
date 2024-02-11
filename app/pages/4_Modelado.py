@@ -51,7 +51,7 @@ El cálculo de los pesos y sesgos se realiza mediante el proceso de retropropaga
 
     st.markdown('''<div style="text-align: justify;">
     
-En todos los casos a excepción de los modelos basados en redes neuronales, se ha hecho uso de GridSearchCV para la obtención de los mejores hiperparámetros de entre todos los proporcionados como entrada. Una vez obtenidos estos hiperparámetros se ha procedido a entrenar el modelo con el conjunto completo de datos de entrenamiento.</div>''', unsafe_allow_html=True)
+En todos los casos a excepción de los modelos basados en redes neuronales, se ha hecho **:orange[uso de GridSearchCV para la obtención de los mejores hiperparámetros]** de entre todos los proporcionados como entrada. Una vez obtenidos estos hiperparámetros se ha procedido a entrenar el modelo con el conjunto completo de datos de entrenamiento.</div>''', unsafe_allow_html=True)
     
 with tab2:
     st.markdown('''## **:orange[Particionado Interno]**
