@@ -32,11 +32,11 @@ with tab2:
     
 Más allá de la definición del concepto, se deberán tener en cuenta los siguientes puntos:
 
-+ **Ámbito geográfico y temporal** que se desea contemplar.
++ **:orange[Ámbito geográfico y temporal]** que se desea contemplar.
 + Abordar ámbitos demasiado amplios podrían llevar a tener problemas para disponer de modelos suficientemente robustos.
-+ Diferentes **tipos de economías en las que se agrupan los países**: economías avanzadas, emergentes, en vías de desarrollo, etc.
-+ **Diversidad de factores desencadenantes de este tipo de situaciones**: normalmente observaremos una conjunción de varios de ellos y no un causante único.
-+ **Factores cambiantes a lo largo de la historia y entre los distintos tipos de economías**: las causas o indicadores de crisis para un determinado periodo temporal o tipo de economía pueden no ser válidas para otros.''')
++ Diferentes **:orange[tipos de economías en las que se agrupan los países]**: economías avanzadas, emergentes, en vías de desarrollo, etc.
++ **:orange[Diversidad de factores desencadenantes de este tipo de situaciones]**: normalmente observaremos una conjunción de varios de ellos y no un causante único.
++ **:orange[Factores cambiantes a lo largo de la historia y entre los distintos tipos de economías}**: las causas o indicadores de crisis para un determinado periodo temporal o tipo de economía pueden no ser válidas para otros.''')
 
 with tab3:
 
@@ -48,13 +48,13 @@ Algunos de los problemas que han sido necesario abordar a lo largo del desarroll
 + Limitación temporal y geográfica de los mismos.
 + Bajo volumen de datos disponibles.
 + Tratamiento de volúmenes elevados de valores ausentes.
-+ Desbalance de clases extremo: por suerte dado que las crisis económicas son eventos infrecuentes, el número de muestras asociadas a la clase minoritaria es extremadamente bajo en el conjunto de datos.
++ **:orange[Desbalance de clases extremo]**: por suerte dado que las crisis económicas son eventos infrecuentes, el número de muestras asociadas a la clase minoritaria es extremadamente bajo en el conjunto de datos.
 
 Estos puntos han hecho necesario abordar técnicas de:
 
 + Imputación de valores ausentes: se han comparado varias estrategias.
-+ Balanceo del número de muestras de cara al entrenamiento de algoritmos: SMOTE, sobremuestreo, submuestreo.
++ **:orange[Balanceo del número de muestras de cara al entrenamiento]** de algoritmos: SMOTE, sobremuestreo, submuestreo.
 + Tipos de algoritmos a emplear.
-+ Creación de funciones de particionado ad-Hoc.
-+ Decisión sobre métricas válidas debido al desbalance de datos, etc.''')
++ **:orange[Creación de funciones de particionado ad-Hoc]**.
++ **:orange[Decisión sobre métricas válidas]** debido al desbalance de datos, etc.''')
 
