@@ -189,16 +189,16 @@ Dentro de este punto, el primer paso será **:orange[eliminar aquellas caracter�
     
     with col1:
         X_train_std_deleted, y_train_deleted, X_test_std_deleted, y_test_deleted = elimina_ausentes(X_train_std, y_train, X_test_std, y_test)
-        st.write('''**:orange[Eliminación de instancias con valores ausentes:]**
+        st.write('''#####**:orange[Eliminación de instancias con valores ausentes:]**
 &nbsp;''', unsafe_allow_html=True)
         st.write('&emsp;Tamaño Original Partición: ', X_train_std.shape, unsafe_allow_html=True)
         st.write('&emsp;Tamaño Final Partición: ', X_train_std_deleted.shape, unsafe_allow_html=True)
     with col2:
-        st.write('''**:orange[Imputación de valores ausentes con valor medio:]**''')
+        st.write('''#####**:orange[Imputación de valores ausentes con valor medio:]**''')
         st.write('&emsp;Tamaño Original Partición: ', X_train_std.shape, unsafe_allow_html=True)
         st.write('&emsp;Tamaño Final Partición: ', X_train_std.shape, unsafe_allow_html=True)
     with col3:
-        st.write('''**:orange[Imputación de valores ausentes mediante algoritmo KNN:]**''')
+        st.write('''#####**:orange[Imputación de valores ausentes mediante algoritmo KNN:]**''')
         st.write('&emsp;Tamaño Original Partición: ', X_train_std.shape, unsafe_allow_html=True)
         st.write('&emsp;Tamaño Final Partición: ', X_train_std.shape, unsafe_allow_html=True)
 
@@ -245,19 +245,19 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
     with st.container():
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.write('**:orange[Eliminación de instancias con valores ausentes:]**')
+            st.write('#####**:orange[Eliminación de instancias con valores ausentes:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_deleted.shape[1])
             st.image('app/graficas/disc_deleted.png')
             st.write(atributos_discriminativos_deleted)
             
         with col2:
-            st.write('**:orange[Valores ausentes con valor medio:]**')
+            st.write('#####**:orange[Valores ausentes con valor medio:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_media.shape[1])
             st.image('app/graficas/disc_media.png')
             st.write(atributos_discriminativos_media)
             
         with col3:
-            st.write('**:orange[Valores ausentes con KNN:]**')
+            st.write('#####**:orange[Valores ausentes con KNN:]**')
             st.write('&emsp;Nº Atributos Discriminativos: ', X_train_std_disc_knn.shape[1])
             st.image('app/graficas/disc_knn.png')
             st.write(atributos_discriminativos_knn)
@@ -267,14 +267,14 @@ El siguiente proceso a realizar se centra en **:orange[eliminar aquellos atribut
     with st.container():
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.write('**:orange[Eliminación de instancias con valores ausentes:]**')
+            st.write('#####**:orange[Eliminación de instancias con valores ausentes:]**')
             st.image('app/graficas/corr_deleted.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col2:
-            st.write('**:orange[Valores ausentes con valor medio:]**')
+            st.write('#####**:orange[Valores ausentes con valor medio:]**')
             st.image('app/graficas/corr_media.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
         with col3:
-            st.write('**:orange[Valores ausentes con KNN:]**')
+            st.write('#####**:orange[Valores ausentes con KNN:]**')
             st.image('app/graficas/corr_knn.png')
             st.write('&emsp;&emsp;No hay atributos con alta correlación')
