@@ -130,7 +130,7 @@ with tab5:
 
 **:orange[Puede ocurrir que el nivel de penalización considerado para un falso positivo y un falso negativo sean diferentes]**, es decir, puede ocurrir que un falso negativo sea muy grave, pero no lo sea un falso positivo o falsa alarma, en cuyo caso nos **:orange[convendría usar otras métricas para potenciar minimizar por ejemplo la sensibilidad o recall del modelo para la clase minoritaria o modificar el umbral de decisión]**.
 
-En este caso **:orange[consideraremos ambas situaciones como igualmente perjudiciales y usaremos como parámetro de evaluación para GridSearchCV el citado “average_precision_score”}**, para lo cual crearemos nuestra propia métrica haciendo uso de “sklearn.metrics.make_scorer”.</div>''', unsafe_allow_html=True)
+En este caso **:orange[consideraremos ambas situaciones como igualmente perjudiciales y usaremos como parámetro de evaluación para GridSearchCV el citado “average_precision_score”]**, para lo cual crearemos nuestra propia métrica haciendo uso de “sklearn.metrics.make_scorer”.</div>''', unsafe_allow_html=True)
 
     col1, col2, col3, col4 = st.columns(4)
     with col2:
