@@ -32,11 +32,11 @@ with tab2:
     
 Más allá de la definición del concepto, se deberán tener en cuenta los siguientes puntos:
 
-+ Ámbito geográfico y temporal que se desea contemplar.
++ **Ámbito geográfico y temporal** que se desea contemplar.
 + Abordar ámbitos demasiado amplios podrían llevar a tener problemas para disponer de modelos suficientemente robustos.
-+ Diferentes tipos de economías en las que se agrupan los países: economías avanzadas, emergentes, en vías de desarrollo, etc.
-+ Diversidad de factores desencadenantes de este tipo de situaciones: normalmente observaremos una conjunción de varios de ellos y no un causante único.
-+ Factores cambiantes a lo largo de la historia y entre los distintos tipos de economías: las causas o indicadores de crisis para un determinado periodo temporal o tipo de economía pueden no ser válidas para otros.''')
++ Diferentes **tipos de economías en las que se agrupan los países**: economías avanzadas, emergentes, en vías de desarrollo, etc.
++ **Diversidad de factores desencadenantes de este tipo de situaciones**: normalmente observaremos una conjunción de varios de ellos y no un causante único.
++ **Factores cambiantes a lo largo de la historia y entre los distintos tipos de economías**: las causas o indicadores de crisis para un determinado periodo temporal o tipo de economía pueden no ser válidas para otros.''')
 
 with tab3:
 
