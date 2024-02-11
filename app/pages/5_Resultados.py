@@ -69,7 +69,7 @@ Si nos centramos en dicho modelo, podemos revisar en qué muestras se han produc
     
     st.markdown('''<div style="text-align: justify;">
     
-Como se puede observar muchos errores se localizan en el año 2020, año de la pandemia de COVID-19 y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable, dado que sabemos que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, con lo que la predicción del modelo podría considerarse correcta.</div>''', unsafe_allow_html=True)
+Como se puede observar **:orange[muchos errores se localizan en el año 2020, año de la pandemia de COVID-19]** y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. **:orange[Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable]**, dado que sabemos que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, con lo que la predicción del modelo podría considerarse correcta.</div>''', unsafe_allow_html=True)
 
 
 
@@ -77,7 +77,7 @@ with tab4:
     st.markdown('''## **:orange[Interpretabilidad]**
 <div style="text-align: justify;">
     
-Una de las **:orange[ventajas del modelo de Regresión Logística es su interpretabilidad]**, ya que evaluando los coeficientes asociados a la función logística podemos determinar qué atributos son más o menos importantes y con qué tipo de relación (directa o inversa). 
+**:orange[Una de las ventajas del modelo de Regresión Logística es su interpretabilidad]**, ya que evaluando los coeficientes asociados a la función logística podemos determinar qué atributos son más o menos importantes y con qué tipo de relación (directa o inversa). 
 
 **:orange[Vamos a revisar si efectivamente los coeficientes asociados a cada uno de los atributos discriminativos]** (ordenados de mayor a menor importancia), **:orange[concuerdan en su tipo de relación con el marco teórico expuesto]**:</div>''', unsafe_allow_html=True)
 
