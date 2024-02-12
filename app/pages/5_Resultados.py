@@ -77,14 +77,14 @@ with tab4:
     st.markdown('''## **:orange[Interpretabilidad]**
 <div style="text-align: justify;">
     
-**:orange[Una de las ventajas del modelo de Regresión Logística es su interpretabilidad]**, ya que evaluando los coeficientes asociados a la función logística podemos determinar qué atributos son más o menos importantes y con qué tipo de relación (directa o inversa). 
+**:orange[Una de las ventajas del modelo de Regresión Logística es su interpretabilidad]**, ya que evaluando los coeficientes asociados a la función logística se puede determinar qué atributos son más o menos importantes y con qué tipo de relación (directa o inversa). 
 
-**:orange[Vamos a revisar si efectivamente los coeficientes asociados a cada uno de los atributos discriminativos]** (ordenados de mayor a menor importancia), **:orange[concuerdan en su tipo de relación con el marco teórico expuesto]**:</div>''', unsafe_allow_html=True)
+**:orange[Se va a revisar si efectivamente los coeficientes asociados a cada uno de los atributos discriminativos]** (ordenados de mayor a menor importancia), **:orange[concuerdan en su tipo de relación con el marco teórico expuesto]**:</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Diferencial relativo del Índice de Precios al Consumo (coeficiente=1,55):]'):
         st.markdown('''<div style="text-align: justify;">
         
-Como vemos coincide con lo expresado en el apartado de marco teórico acerca de que escenarios de alta/hiper-inflación pueden constituir un indicador de posible crisis financiera.</div>''', unsafe_allow_html=True)
+Como se ve coincide con lo expresado en el apartado de marco teórico acerca de que escenarios de alta/hiper-inflación pueden constituir un indicador de posible crisis financiera.</div>''', unsafe_allow_html=True)
 
     with st.expander('+ :orange[Diferencial absoluto del estado de Cuenta Corriente del país escalado por el Producto Interior Bruto (coeficiente=-0,86):]'):
         st.markdown('''<div style="text-align: justify;">
