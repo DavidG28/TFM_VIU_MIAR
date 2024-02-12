@@ -104,7 +104,7 @@ El listado de atributos creados vendrá dado por:</div>''', unsafe_allow_html=Tr
     with st.expander('+ :orange[Diferencial relativo del Índice de Precios al Consumo] - (cpi_dif_por2)'):
         st.markdown('''<div style="text-align: justify;">
         
-Representa el cambio relativo entre el valor actual del Índice de Precios al Consumo (IPC o Consumer Prices Index CPI en inglés), y su valor anterior (dos años antes en nuestro caso). El motivo de selección de este parámetro se debe a que como hemos visto es frecuente que en situaciones de crisis financiera y situaciones de debilidad económica se produzcan escenarios de hiper-inflación que en muchas ocasiones se unen a escenarios de devaluación de la moneda nacional. Este tipo de escenarios de inflación elevada e hiper-inflación, podrían ser detectados mediante este parámetro ya que presentarían valores elevados del mismo.''', unsafe_allow_html=True)
+Representa el cambio relativo entre el valor actual del Índice de Precios al Consumo (IPC o Consumer Prices Index CPI en inglés), y su valor anterior (dos años antes en este caso). El motivo de selección de este parámetro se debe a que como se ha visto es frecuente que en situaciones de crisis financiera y situaciones de debilidad económica se produzcan escenarios de hiper-inflación que en muchas ocasiones se unen a escenarios de devaluación de la moneda nacional. Este tipo de escenarios de inflación elevada e hiper-inflación, podrían ser detectados mediante este parámetro ya que presentarían valores elevados del mismo.''', unsafe_allow_html=True)
         
     with st.expander('+ :orange[Diferencial absoluto del Agregado Monetario Amplio (M3) escalado por el Producto Interior Bruto del país] - (money_pib_dif_abs2)'):
         st.markdown('''<div style="text-align: justify;">
@@ -114,27 +114,27 @@ En este caso se calculará la diferencia absoluta a dos años de dicho indicador
     with st.expander('+ :orange[Diferencial relativo del Consumo Real per Cápita] - (rconsbarro_dif_por2)'):
         st.markdown('''<div style="text-align: justify;">
     
-De nuevo calcularemos el cambio relativo del indicador a dos años. Este indicador representa el volumen de bienes y servicios consumidos por persona y año y se considera como un buen indicador del nivel de salud de la economía.''', unsafe_allow_html=True)
+De nuevo se calculará el cambio relativo del indicador a dos años. Este indicador representa el volumen de bienes y servicios consumidos por persona y año y se considera como un buen indicador del nivel de salud de la economía.''', unsafe_allow_html=True)
         
     with st.expander('+ :orange[Diferencial absoluto del volumen de Deuda Pública escalado por el Producto Interior Bruto] - (pdebt_pib_dif_abs2)'):
         st.markdown('''<div style="text-align: justify;">
     
-Como en casos anteriores calcularemos el cambio absoluto del indicador a dos años, indicador que como hemos visto puede ser signo de situaciones financieras adversas dado que en las crisis financieras los países pueden requerir aumentar su nivel de deuda acudiendo a financiación externa.''', unsafe_allow_html=True)
+Como en casos anteriores se calculará el cambio absoluto del indicador a dos años, indicador que como se ha visto puede ser signo de situaciones financieras adversas dado que en las crisis financieras los países pueden requerir aumentar su nivel de deuda acudiendo a financiación externa.''', unsafe_allow_html=True)
         
     with st.expander('+ :orange[Diferencial absoluto del volumen de Inversión escalado por el Producto Interior Bruto] - (inv_pib_dif_abs2)'):
         st.markdown('''<div style="text-align: justify;">
     
-De nuevo diferencial calculado a dos años. Como hemos visto uno de los posibles motivos desencadenantes de situaciones de crisis es la pérdida de confianza de los inversores en el país con el correspondiente descenso del volumen de inversión.''', unsafe_allow_html=True)
+De nuevo diferencial calculado a dos años. Como se ha visto uno de los posibles motivos desencadenantes de situaciones de crisis es la pérdida de confianza de los inversores en el país con el correspondiente descenso del volumen de inversión.''', unsafe_allow_html=True)
         
     with st.expander('+ :orange[Diferencial absoluto del estado de Cuenta Corriente del país escalado por el Producto Interior Bruto] - (ca_pib_dif_abs2)'):
         st.markdown('''<div style="text-align: justify;">
     
-Calculado nuevamente a dos años. Indicador que refleja el volumen de transacciones comerciales y de bienes y servicios transfronterizas o cross-border. Como hemos visto, situaciones de bloqueo comercial que podrían culminar en situaciones de crisis, quedarían reflejadas en este indicador.''', unsafe_allow_html=True)
+Calculado nuevamente a dos años. Indicador que refleja el volumen de transacciones comerciales y de bienes y servicios transfronterizas o cross-border. Como se ha visto, situaciones de bloqueo comercial que podrían culminar en situaciones de crisis, quedarían reflejadas en este indicador.''', unsafe_allow_html=True)
         
     with st.expander('+ :orange[Diferencial absoluto del Volumen de Crédito al sector privado escalado por el Producto Interior Bruto] - (tloans_pib_dif_abs2)'):
         st.markdown('''<div style="text-align: justify;">
     
-Calculado a dos años. Como hemos visto volúmenes de crédito elevados podrían estar relacionados con la aparición de “burbújas” financieras que podrían desencadenar finalmente situaciones de crisis.''', unsafe_allow_html=True)
+Calculado a dos años. Como se ha visto volúmenes de crédito elevados podrían estar relacionados con la aparición de “burbújas” financieras que podrían desencadenar finalmente situaciones de crisis.''', unsafe_allow_html=True)
         
     with st.expander('+ :orange[Diferencial absoluto del ratio Volumen de Crédito al sector privado - Tipo de Interés a largo plazo] - (tdbtserv_pib_dif_abs2)'):
         st.markdown('''<div style="text-align: justify;">
