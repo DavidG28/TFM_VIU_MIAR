@@ -112,7 +112,7 @@ with tab4:
     st.markdown('''## **:orange[Pipeline]**
 <div style="text-align: justify;">
     
-Un punto importante a destacar y en el que debemos centrarnos, es el referido a cuándo se debe realizar el proceso de balanceo de los datos en el caso de usar cross-validation. Si dicho proceso se aplica directamente sobre el conjunto de datos de entrenamiento sobre el cual a su vez se aplicará posteriormente una función para el reparto en folds, este proceso no garantiza que en las particiones finales de entrenamiento se mantenga dicho reparto equilibrado de muestras, por lo que no habría sido de utilidad.
+Un punto importante a destacar y en el que hay que centrarse, es el referido a cuándo se debe realizar el proceso de balanceo de los datos en el caso de usar cross-validation. Si dicho proceso se aplica directamente sobre el conjunto de datos de entrenamiento sobre el cual a su vez se aplicará posteriormente una función para el reparto en folds, este proceso no garantiza que en las particiones finales de entrenamiento se mantenga dicho reparto equilibrado de muestras, por lo que no habría sido de utilidad.
 
 **:orange[Para asegurar que se mantiene el buscado reparto equitativo de muestras en las particiones de entrenamiento, el proceso de balanceo debe realizarse directamente sobre la partición de entrenamiento de cada fold]**. Para ello se ha hecho uso de la librería “Imbalanced-learn”, en concreto de la utilidad “make_pipeline” que permite crear un estimador que sirva de entrada al proceso de entrenamiento concatenando para ello transformaciones, muestreos y el algoritmo concreto a usar. En este caso sólo se han concatenado el proceso de balanceo de datos (usando para ello cada una de las estrategias indicadas anteriormente), y el algoritmo de clasificación a usar.</div>''', unsafe_allow_html=True)
 
@@ -126,11 +126,11 @@ with tab5:
     
 **:orange[En casos como el presente]** u otros parecidos (como pueden ser detección de fraude, anomalías, etc.), lo que **:orange[se suele buscar es una métrica que maximice el número de verdaderos positivos, pero manteniendo un equilibrio con el número de falsos positivos]**, los cuales estarían representando falsas alarmas que deberían ser revisadas con los posibles costes asociados que ésto podría suponer.
 
-**:orange[Una métrica que nos permite evaluar dicho equilibrio es “sklearn.metrics.average_precision_score”]**, que calcula una aproximación del área bajo la curva Precisión-Sensibilidad, ya que en casos de datos desbalanceados suele considerarse más estable que el área bajo la curva ROC, usada en clasificación binaria de conjuntos de datos balanceados para evaluar la capacidad discriminativa del modelo entre clases en función del umbral de decisión establecido.
+**:orange[Una métrica que permite evaluar dicho equilibrio es “sklearn.metrics.average_precision_score”]**, que calcula una aproximación del área bajo la curva Precisión-Sensibilidad, ya que en casos de datos desbalanceados suele considerarse más estable que el área bajo la curva ROC, usada en clasificación binaria de conjuntos de datos balanceados para evaluar la capacidad discriminativa del modelo entre clases en función del umbral de decisión establecido.
 
-**:orange[Puede ocurrir que el nivel de penalización considerado para un falso positivo y un falso negativo sean diferentes]**, es decir, puede ocurrir que un falso negativo sea muy grave, pero no lo sea un falso positivo o falsa alarma, en cuyo caso nos **:orange[convendría usar otras métricas para potenciar minimizar por ejemplo la sensibilidad o recall del modelo para la clase minoritaria o modificar el umbral de decisión]**.
+**:orange[Puede ocurrir que el nivel de penalización considerado para un falso positivo y un falso negativo sean diferentes]**, es decir, puede ocurrir que un falso negativo sea muy grave, pero no lo sea un falso positivo o falsa alarma, en cuyo caso **:orange[convendría usar otras métricas para potenciar minimizar por ejemplo la sensibilidad o recall del modelo para la clase minoritaria o modificar el umbral de decisión]**.
 
-En este caso **:orange[consideraremos ambas situaciones como igualmente perjudiciales y usaremos como parámetro de evaluación para GridSearchCV el citado “average_precision_score”]**, para lo cual crearemos nuestra propia métrica haciendo uso de “sklearn.metrics.make_scorer”.</div>''', unsafe_allow_html=True)
+En este caso **:orange[se considerarán ambas situaciones como igualmente perjudiciales y se usará como parámetro de evaluación para GridSearchCV el citado “average_precision_score”]**, para lo cual se creará una métrica customizada haciendo uso de “sklearn.metrics.make_scorer”.</div>''', unsafe_allow_html=True)
 
     col1, col2, col3, col4 = st.columns(4)
     with col2:
