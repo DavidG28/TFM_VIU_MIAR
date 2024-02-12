@@ -35,7 +35,7 @@ Más allá de la definición del concepto, se deberán tener en cuenta los sigui
 + **:orange[Ámbito geográfico y temporal]** que se desea contemplar.
 + Abordar ámbitos demasiado amplios podrían llevar a tener problemas para disponer de modelos suficientemente robustos.
 + Diferentes **:orange[tipos de economías en las que se agrupan los países]**: economías avanzadas, emergentes, en vías de desarrollo, etc.
-+ **:orange[Diversidad de factores desencadenantes de este tipo de situaciones]**: normalmente observaremos una conjunción de varios de ellos y no un causante único.
++ **:orange[Diversidad de factores desencadenantes de este tipo de situaciones]**: normalmente se observarán una conjunción de varios de ellos y no un causante único.
 + **:orange[Factores cambiantes a lo largo de la historia y entre los distintos tipos de economías]**: las causas o indicadores de crisis para un determinado periodo temporal o tipo de economía pueden no ser válidas para otros.''')
 
 with tab3:
