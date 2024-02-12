@@ -15,7 +15,7 @@ with tab1:
 <div style="text-align: justify;">
 
 Se va a comenzar realizando la partición de datos externa para separar el conjunto de datos total en los subconjuntos de entrenamiento (train), y prueba (test).
-**:orange[Dado que estamos ante un problema de series temporales, se requiere mantener la coherencia temporal]** por lo que:
+**:orange[Dado que se está ante un problema de series temporales, se requiere mantener la coherencia temporal]** por lo que:
 
 * No se aplicará shuffle a los datos.
 * En este caso **:orange[asegurar que datos de entrenamiento no se localizan entre los datos de test]**, no sólo se limita a las instancias individuales en sí, sino que dado que el objetivo será predecir si en un cierto año y para un determinado país se está ante una posible situación de pre-crisis, **:orange[también hay que asegurar que no existe información relativa a años posteriores de los contenidos en el conjunto de test ni para el país bajo estudio en concreto ni tampoco para otros paises]** (*Hellwig, K.P. (2021). Predicting Fiscal Crises: A Machine Learning Approach*).
