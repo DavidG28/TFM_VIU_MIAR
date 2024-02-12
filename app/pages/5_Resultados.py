@@ -21,7 +21,7 @@ with tab1:
 + Estrategias de balanceo de datos.
 + Algoritmos seleccionados.
 
-Centrándonos en las estrategias de imputación de valores ausentes, **:orange[los modelos con mejores resultados]** para cada una de ellas han sido:
+Haciendo foco en las estrategias de imputación de valores ausentes, **:orange[los modelos con mejores resultados]** para cada una de ellas han sido:
 
 + **:orange[Regresión Logística con Random Oversampling para eliminación de valores ausentes.]**
 + **:orange[Perceptrón Multicapa con Random Oversampling para imputación de valores ausentes por valor medio del atributo.]**
@@ -34,7 +34,7 @@ Las métricas obtenidas en cada caso han sido:''')
 
     st.dataframe(tabla_mejores_modelos)
 
-    st.write('**:orange[Basándonos en el valor de la métrica seleccionada]** para evaluar los modelos ("average_precision_score”), **:orange[el mejor modelo final sería Regresión Logística con Random Oversampling y eliminación de valores ausentes]**.')
+    st.write('**:orange[En base al valor de la métrica seleccionada]** para evaluar los modelos ("average_precision_score”), **:orange[el mejor modelo final sería Regresión Logística con Random Oversampling y eliminación de valores ausentes]**.')
 
 with tab2:    
     st.markdown('''## **:orange[Matrices de confusión]**
@@ -55,13 +55,13 @@ En ellas se puede ver claramente el **:orange[trade-off entre fiabilidad a la ho
 
 Como se puede observar, el primer y tercer modelo aciertan todas las muestras de “pre-crisis” de la partición de test, mientras que el segundo falla en ocho de los casos. Sin embargo el segundo modelo tiene un nivel de falsos positivos bastante menor que los otros dos casos.
 
-En este caso coincidiendo con el mayor valor de la métrica seleccionada, consideraremos el primer modelo como el mejor de los tres.</div>''', unsafe_allow_html=True)
+En este caso coincidiendo con el mayor valor de la métrica seleccionada, se considerará el primer modelo como el mejor de los tres.</div>''', unsafe_allow_html=True)
 
 with tab3:
     st.markdown('''## **:orange[Predicciones]**
 <div style="text-align: justify;">
 
-Si nos centramos en dicho modelo, podemos revisar en qué muestras se han producido los errores (**:red[rojo]**) y aciertos (**:green[verde]**). Los años ausentes corresponden a aquellos asociados a crisis o post-crisis, que fueron eliminados al inicio para evitar la introducción de sesgo):</div>''', unsafe_allow_html=True)
+Focalizando en dicho modelo, se puede revisar en qué muestras se han producido los errores (**:red[rojo]**) y aciertos (**:green[verde]**). Los años ausentes corresponden a aquellos asociados a crisis o post-crisis, que fueron eliminados al inicio para evitar la introducción de sesgo):</div>''', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
     with col2:
@@ -69,7 +69,7 @@ Si nos centramos en dicho modelo, podemos revisar en qué muestras se han produc
     
     st.markdown('''<div style="text-align: justify;">
     
-Como se puede observar **:orange[muchos errores se localizan en el año 2020, año de la pandemia de COVID-19]** y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. **:orange[Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable]**, dado que sabemos que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, **:orange[con lo que la predicción del modelo podría considerarse correcta]**.</div>''', unsafe_allow_html=True)
+Como se puede observar **:orange[muchos errores se localizan en el año 2020, año de la pandemia de COVID-19]** y por tanto año extremadamente excepcional en muchos aspectos y entre ellos los económicos, por lo que tiene sentido que el modelo pueda detectar patrones de futura crisis. **:orange[Dado que en el conjunto de datos de trabajo no hay información para los años posteriores, todas las muestras correspondientes a 2020 aparecen marcadas como “no crisis”, pero realmente esta catalogación es cuestionable]**, dado que se sabe que a nivel económico los años post-pandemia podrían considerarse como años de crisis económica, **:orange[con lo que la predicción del modelo podría considerarse correcta]**.</div>''', unsafe_allow_html=True)
 
 
 
